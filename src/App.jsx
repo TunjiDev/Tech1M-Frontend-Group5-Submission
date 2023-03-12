@@ -6,7 +6,7 @@ import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
-    <Box textAlign={"center"}>
+    <Box>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
