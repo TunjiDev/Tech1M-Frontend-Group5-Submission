@@ -1,0 +1,11 @@
+.background {
+  background: linear-gradient(0deg, #197ef2, #197ef2), url("../assets/images/welcome-screen.png") #ffffff;
+  background-position: "center";
+  background-repeat: "no-repeat";
+  background-size: cover;
+  background-blend-mode: multiply, normal, normal;
+}
+
+.link {
+  color: #0360ef;
+}
