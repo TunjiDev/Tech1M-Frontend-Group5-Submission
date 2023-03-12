@@ -1,24 +1,32 @@
 import React from "react";
 import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./HomePageContent.module.css";
 import { HomeIconComponent } from "../assets/HomeIcon.jsx";
 import { RightArrowIconComponent } from "../assets/RightArrowIcon";
 import logo from "../assets/images/logowhite.png";
 
 function HomePageContent() {
+  const navigate = useNavigate();
+
   return (
     <Box h={"100vh"} className={styles.background} position={"relative"}>
-      <Image src={logo} alt="Tech1M Juniors Logo" position={"absolute"} top={"45%"} left={"10%"} />
+      <Image
+        src={logo}
+        alt="Tech1M Juniors Logo"
+        position={"absolute"}
+        top={{ base: "5%", md: "42%", lg: "45%" }}
+        left={"10%"}
+      />
       <Flex
-        w={"50vw"}
+        w={{ base: "98%", md: "50%", lg: "50%" }}
         background={"#1E1717"}
         height={"full"}
         mixBlendMode={"normal"}
         opacity={0.7}
         position={"absolute"}
-        right={"10rem"}
-        px={"5rem"}
+        right={{ base: "1rem", md: "5rem", lg: "10rem" }}
+        px={{ base: "1rem", md: "2rem", lg: "5rem" }}
         justifyContent={"center"}
         alignItems={"center"}
       >
@@ -41,6 +49,7 @@ function HomePageContent() {
             justifyContent={"center"}
             alignItems={"center"}
             cursor={"pointer"}
+            onClick={() => navigate("/signup")}
           >
             <HomeIconComponent color /> <Text mx={"1rem"}>Let's Get Started</Text> <RightArrowIconComponent />
           </Flex>
