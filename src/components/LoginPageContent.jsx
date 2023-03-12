@@ -52,7 +52,7 @@ function LoginPageContent() {
           <Flex justifyContent={"center"} alignItems={"center"} mb={"1rem"}>
             <Image src={logo} alt="Tech1M Juniors Logo" />
           </Flex>
-          <Box>
+          <Box mb={"1.2rem"}>
             <FormLabel fontSize={{ base: ".8rem", md: "1rem", lg: "1rem" }} color={"#003E9C"} htmlFor="email">
               Email Address
             </FormLabel>
@@ -70,7 +70,7 @@ function LoginPageContent() {
             </FormHelperText>
           </Box>
 
-          <Box>
+          <Box mb={"1.2rem"}>
             <FormLabel fontSize={{ base: ".8rem", md: "1rem", lg: "1rem" }} color={"#003E9C"} htmlFor="password">
               Password
             </FormLabel>
