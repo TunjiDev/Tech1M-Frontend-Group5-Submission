@@ -35,7 +35,7 @@ function HomePageContent() {
           <Flex
             backgroundColor={"#0065FF"}
             color={"#FFFFFF"}
-            w={"full"} /*_hover={{ color: "#0563ec", bg: "#FFFFFF" }}*/
+            w={"full"}
             py={".5rem"}
             borderRadius={"0.5rem"}
             justifyContent={"center"}
@@ -47,7 +47,7 @@ function HomePageContent() {
 
           <Text textAlign={"center"} w={"full"} color={"#FFFEFE"}>
             Already have an account!{" "}
-            <Link to="login" className={styles.link}>
+            <Link to="/login" className={styles.link}>
               Log in
             </Link>
           </Text>
