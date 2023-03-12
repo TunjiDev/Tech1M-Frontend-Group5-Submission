@@ -66,7 +66,7 @@ function LoginPageContent() {
               <InputRightElement children={<EmailIcon color={"#96C0FF"} />} />
             </InputGroup>
             <FormHelperText fontSize={{ base: ".6rem", md: ".75rem", lg: ".75rem" }} color={"#C2C7D0"}>
-              Enter a valid email without space
+              Enter your valid email address
             </FormHelperText>
           </Box>
 
@@ -84,7 +84,7 @@ function LoginPageContent() {
               <InputRightElement children={<AiOutlineEye onClick={handleClick} color={"#96C0FF"} />} />
             </InputGroup>
             <FormHelperText fontSize={{ base: ".6rem", md: ".75rem", lg: ".75rem" }} color={"#C2C7D0"}>
-              Enter a strong password
+              Enter your password
             </FormHelperText>
           </Box>
 
@@ -99,7 +99,7 @@ function LoginPageContent() {
             <option>Student</option>
           </Select>
           <FormHelperText fontSize={{ base: ".6rem", md: ".75rem", lg: ".75rem" }} color={"#C2C7D0"}>
-            Select your role
+            Select your role to continue
           </FormHelperText>
 
           <Flex
