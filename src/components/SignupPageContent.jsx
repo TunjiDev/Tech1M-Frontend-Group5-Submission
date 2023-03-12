@@ -149,6 +149,7 @@ function SignupPageContent() {
           alignItems={"center"}
           cursor={"pointer"}
           mt={"3rem"}
+          mb={"1rem"}
         >
           <RightArrowIconComponent /> <Text mx={"1rem"}>Sign up</Text>
         </Flex>
