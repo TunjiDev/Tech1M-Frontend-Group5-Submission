@@ -32,7 +32,7 @@ function HomePageContent() {
       >
         <Flex h={"50%"} direction={"column"} alignItems={"start"} justifyContent={"center"}>
           <Heading color={"#FFFEFE"} mb={"1.5rem"}>
-            Welcome
+            Hi Debby!
           </Heading>
 
           <Text color={"#FFFEFE"} textAlign={"start"} mb={"4rem"}>
