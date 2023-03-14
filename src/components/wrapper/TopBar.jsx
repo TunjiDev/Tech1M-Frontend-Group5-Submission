@@ -1,5 +1,16 @@
 import React from "react";
-import { Box, Flex, Image, Input, InputGroup, InputLeftElement, useMediaQuery, Avatar, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Image,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  useMediaQuery,
+  Avatar,
+  Text,
+  Badge,
+} from "@chakra-ui/react";
 import { CiSearch } from "react-icons/ci";
 import { BsChatSquareDots, BsGear } from "react-icons/bs";
 import { CiBellOn } from "react-icons/ci";
@@ -38,11 +49,35 @@ function TopBar() {
       </Box>
 
       <Flex flex={2} justifyContent={"center"} alignItems={"center"}>
-        <Box mr={"1rem"}>
+        <Box mr={"1rem"} position="relative">
           <BsChatSquareDots color={"#96C0FF"} size={20} />
+          <Badge
+            position={"absolute"}
+            top={"-2"}
+            right={"-2"}
+            bg={"#01a830"}
+            color={"#FFFEFE"}
+            fontWeight={500}
+            fontSize={"xs"}
+            borderRadius={"50%"}
+          >
+            5
+          </Badge>
         </Box>
-        <Box mr={"1rem"}>
+        <Box mr={"1rem"} position="relative">
           <CiBellOn color={"#96C0FF"} size={20} />
+          <Badge
+            position={"absolute"}
+            top={-1.5}
+            right={-1.5}
+            bg={"#FA0724"}
+            color={"#FFFEFE"}
+            fontWeight={500}
+            fontSize={"xs"}
+            borderRadius={"50%"}
+          >
+            3
+          </Badge>
         </Box>
 
         <Flex mr={"2rem"}>

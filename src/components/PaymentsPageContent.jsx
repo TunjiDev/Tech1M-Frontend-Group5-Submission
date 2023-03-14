@@ -3,8 +3,8 @@ import { Box } from "@chakra-ui/react";
 
 function PaymentsPageContent() {
   return (
-    <Box textAlign={"center"} pt={"5rem"}>
-      Payments Page
+    <Box textAlign={"center"} minWidth={"85vw"} height={"100vh"} position={"absolute"} right={0}>
+      <Box mt={"6rem"}>Payments Page</Box>
     </Box>
   );
 }
