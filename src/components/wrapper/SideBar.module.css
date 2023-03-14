@@ -1,0 +1,19 @@
+.active {
+  color: #003e9c;
+  cursor: pointer;
+}
+
+.navbar__active__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar__link {
+  color: #6ba6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}

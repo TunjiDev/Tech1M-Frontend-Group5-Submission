@@ -1,12 +1,12 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 
-function DashboardPageContent() {
+function QuizAssignmentPageContent() {
   return (
     <Box textAlign={"center"} pt={"5rem"}>
-      Dashboard Page
+      Quiz / Assignment Page
     </Box>
   );
 }
 
-export default DashboardPageContent;
+export default QuizAssignmentPageContent;

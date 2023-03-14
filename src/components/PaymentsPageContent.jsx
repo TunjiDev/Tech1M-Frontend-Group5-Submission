@@ -1,12 +1,12 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 
-function DashboardPageContent() {
+function PaymentsPageContent() {
   return (
     <Box textAlign={"center"} pt={"5rem"}>
-      Dashboard Page
+      Payments Page
     </Box>
   );
 }
 
-export default DashboardPageContent;
+export default PaymentsPageContent;
