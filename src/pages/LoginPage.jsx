@@ -6,9 +6,9 @@ function LoginPage() {
   return (
     <>
       <Helmet>
-        <title>LoginPage</title>
+        <title>Login</title>
         <meta name="description" content="Log in to explore!" />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="/login" />
       </Helmet>
       <LoginPageContent />
     </>
