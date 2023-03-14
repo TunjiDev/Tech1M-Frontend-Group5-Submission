@@ -6,12 +6,12 @@ function SignupPage() {
   return (
     <>
       <Helmet>
-        <title>SignUpPage</title>
+        <title>SignUp</title>
         <meta
           name="description"
           content="Join Us!, Create an Account or Register"
         />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="/signup" />
       </Helmet>
       <SignupPageContent />
     </>
