@@ -15,7 +15,7 @@ function SideBar() {
       bg={"#E6F0FF"}
       color={"white"}
       minWidth={"13vw"}
-      h={"200vh"}
+      h={"165vh"}
       position={"absolute"}
       left={0}
       top={0}
@@ -30,7 +30,7 @@ function SideBar() {
           className={(navData) =>
             navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
           }
-          to="/dashboard"
+          to="/dashboard-admin"
         >
           <Box>
             <RxDashboard size={20} />

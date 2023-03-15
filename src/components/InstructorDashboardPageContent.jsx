@@ -1,8 +1,6 @@
 import React from "react";
 import { Box, Flex, Text, Heading, Avatar, Progress, AvatarGroup } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
-import Calendar from "./Calendar";
 import student1 from "../assets/images/student-progress/student1.png";
 import student2 from "../assets/images/student-progress/student2.png";
 import student3 from "../assets/images/student-progress/student3.png";
@@ -15,27 +13,9 @@ import lesson3 from "../assets/images/upcoming-lessons/lesson3.png";
 import lesson4 from "../assets/images/upcoming-lessons/lesson4.png";
 import lesson5 from "../assets/images/upcoming-lessons/lesson5.png";
 
-const data = [
-  { day: "02/01", number: 10 },
-  { day: "03/01", number: 20 },
-  { day: "04/01", number: 30 },
-  { day: "05/01", number: 25 },
-  { day: "06/01", number: 15 },
-  { day: "07/01", number: 10 },
-  { day: "08/01", number: 20 },
-];
-
-function DashboardPageContent() {
+function InstructorDashboardPageContent() {
   return (
-    <Box
-      textAlign={"center"}
-      // background={"green"}
-      // color={"white"}
-      minWidth={"85vw"}
-      height={"100vh"}
-      position={"absolute"}
-      right={0}
-    >
+    <Box textAlign={"center"} minWidth={"85vw"} height={"100vh"} position={"absolute"} right={0}>
       <Box mt={"6rem"} px={"1rem"}>
         <Flex
           bg={"#0065FF"}
@@ -374,25 +354,9 @@ function DashboardPageContent() {
             </Box>
           </Box>
         </Flex>
-
-        <Flex>
-          <Box mt={"2rem"} flex={2}>
-            <BarChart width={600} height={300} data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="day" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="number" fill="#0065ff" barSize={20} />
-            </BarChart>
-          </Box>
-          <Box mt={"2rem"} flex={1}>
-            <Calendar />
-          </Box>
-        </Flex>
       </Box>
     </Box>
   );
 }
 
-export default DashboardPageContent;
+export default InstructorDashboardPageContent;

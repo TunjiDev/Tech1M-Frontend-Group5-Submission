@@ -5,7 +5,8 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import Wrapper from "./components/wrapper/Wrapper";
-import DashboardPage from "./pages/DashboardPage";
+import AdminDashboardPage from "./pages/AdminDashboardPage";
+import InstructorDashboardPage from "./pages/InstructorDashboardPage";
 import CoursesPage from "./pages/CoursesPage";
 import StudentsPage from "./pages/StudentsPage";
 import PaymentsPage from "./pages/PaymentsPage";
@@ -22,11 +23,20 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route
-          path="/dashboard"
+          path="/dashboard-admin"
           element={
             <Wrapper>
               {" "}
-              <DashboardPage />
+              <AdminDashboardPage />
+            </Wrapper>
+          }
+        />
+        <Route
+          path="/dashboard-instructor"
+          element={
+            <Wrapper>
+              {" "}
+              <InstructorDashboardPage />
             </Wrapper>
           }
         />
