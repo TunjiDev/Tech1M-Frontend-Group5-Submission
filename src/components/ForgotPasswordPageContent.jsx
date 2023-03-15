@@ -16,9 +16,9 @@ import {
 import { RepeatIcon } from "@chakra-ui/icons";
 import logo from "../assets/images/logoblue.png";
 import { EmailIcon } from "@chakra-ui/icons";
-import styles from "./ForgotPassword.module.css";
+import styles from "./ForgotPasswordPageContent.module.css";
 
-function ForgotPasswordContent() {
+function ForgotPasswordPageContent() {
   const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
 
   return (
@@ -81,4 +81,4 @@ function ForgotPasswordContent() {
   );
 }
 
-export default ForgotPasswordContent;
+export default ForgotPasswordPageContent;
