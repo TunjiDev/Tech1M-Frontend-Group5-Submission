@@ -132,8 +132,8 @@ function SignupPageContent() {
           sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
           placeholder="Select Role"
         >
+          <option>Super Admin</option>
           <option>Instructor</option>
-          <option>Student</option>
         </Select>
         <FormHelperText fontSize={{ base: ".6rem", md: ".75rem", lg: ".75rem" }} color={"#C2C7D0"}>
           Select your role
