@@ -1,5 +1,5 @@
 import React from "react";
-import ForgotPasswordContent from "../components/ForgotPasswordContent";
+import ForgotPasswordPageContent from "../components/ForgotPasswordPageContent";
 import { Helmet } from "react-helmet-async";
 
 function ForgotPasswordPage() {
@@ -10,7 +10,7 @@ function ForgotPasswordPage() {
         <meta name="description" content="Ooops!, Forgot Password!" />
         <link rel="canonical" href="/forgot-password" />
       </Helmet>
-      <ForgotPasswordContent />
+      <ForgotPasswordPageContent />
     </>
   );
 }

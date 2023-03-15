@@ -14,8 +14,8 @@ function SideBar() {
     <Flex
       bg={"#E6F0FF"}
       color={"white"}
-      minWidth={"15vw"}
-      h={"100vh"}
+      minWidth={"13vw"}
+      h={"200vh"}
       position={"absolute"}
       left={0}
       top={0}
