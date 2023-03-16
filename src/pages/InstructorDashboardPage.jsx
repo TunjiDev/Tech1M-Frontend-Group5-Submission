@@ -8,7 +8,7 @@ function InstructorDashboardPage() {
       <Helmet>
         <title>Instructor Dashboard</title>
         <meta name="description" content="Welcome to your Dashboard!" />
-        <link rel="canonical" href="./pages/InstructorDashboardPage" />
+        <link rel="canonical" href="/dashboard-instructor" />
       </Helmet>
       <InstructorDashboardPageContent />
     </>

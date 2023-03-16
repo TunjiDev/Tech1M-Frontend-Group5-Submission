@@ -8,7 +8,7 @@ function AdminDashboardPage() {
         <Helmet>
           <title>Admin Dashboard</title>
           <meta name="description" content="Welcome to your Dashboard!" />
-          <link rel="canonical" href="./pages/AdminDashboardPage" />
+          <link rel="canonical" href="/dashboard-admin" />
         </Helmet>
         <AdminDashboardPageContent />
       </>
