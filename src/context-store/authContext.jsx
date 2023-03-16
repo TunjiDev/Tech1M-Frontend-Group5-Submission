@@ -49,8 +49,8 @@ export const AuthContextProvider = (props) => {
     initialToken = tokenData.token;
   }
   const [token, setToken] = useState(initialToken);
-  const [fullName, setFullName] = useState("");
-  const [role, setRole] = useState("");
+  const [, setFullName] = useState("");
+  const [, setRole] = useState("");
 
   const userIsLoggedIn = !!token;
 
