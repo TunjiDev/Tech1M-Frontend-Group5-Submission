@@ -49,7 +49,7 @@ function TopBar() {
       </Box>
 
       <Flex flex={2} justifyContent={"center"} alignItems={"center"}>
-        <Box mr={"1rem"} position="relative">
+        <Box mr={"1rem"} position="relative" cursor={"pointer"}>
           <BsChatSquareDots color={"#96C0FF"} size={20} />
           <Badge
             position={"absolute"}
@@ -64,7 +64,7 @@ function TopBar() {
             5
           </Badge>
         </Box>
-        <Box mr={"1rem"} position="relative">
+        <Box mr={"1rem"} position="relative" cursor={"pointer"}>
           <CiBellOn color={"#96C0FF"} size={20} />
           <Badge
             position={"absolute"}
@@ -92,7 +92,7 @@ function TopBar() {
           </Box>
         </Flex>
 
-        <Box>
+        <Box cursor={"pointer"}>
           <BsGear color={"#96C0FF"} />
         </Box>
       </Flex>
