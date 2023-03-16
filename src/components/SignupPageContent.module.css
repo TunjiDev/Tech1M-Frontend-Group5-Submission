@@ -9,3 +9,12 @@
 .link {
   color: #0360ef;
 }
+
+.invalid input {
+  border: 1px solid #fa0724;
+  background-color: #fddddd;
+}
+
+.errorText {
+  color: #fa0724;
+}
