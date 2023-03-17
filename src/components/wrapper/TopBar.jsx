@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Flex,
@@ -14,11 +14,13 @@ import {
 import { CiSearch } from "react-icons/ci";
 import { BsChatSquareDots, BsGear } from "react-icons/bs";
 import { CiBellOn } from "react-icons/ci";
+import AuthContext from "../../context-store/authContext";
 import logo from "../../assets/images/logoblue.png";
 import avatar from "../../assets/images/avatar.png";
 
 function TopBar() {
   const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
+  const authCtx = useContext(AuthContext);
 
   return (
     <Flex
@@ -87,7 +89,7 @@ function TopBar() {
           <Box>
             <Text color={"#0065FF"}>Adams Chuks</Text>
             <Text color={"#6B788E"} fontSize={"0.625rem"} fontWeight={500}>
-              Super Admin
+              {`${authCtx.role === "Super Admin" ? "Super Admin" : "Instructor"}`}
             </Text>
           </Box>
         </Flex>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { RxDashboard } from "react-icons/rx";
@@ -7,9 +7,12 @@ import { SlGraduation } from "react-icons/sl";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { MdOutlineAssignment } from "react-icons/md";
 import { TbBrandWechat } from "react-icons/tb";
+import AuthContext from "../../context-store/authContext";
 import styles from "./SideBar.module.css";
 
 function SideBar() {
+  const authCtx = useContext(AuthContext);
+
   return (
     <Flex
       bg={"#E6F0FF"}
@@ -25,33 +28,37 @@ function SideBar() {
       justifyContent={"flex-start"}
       alignItems={"flex-start"}
     >
-      <Box pl={"2rem"} mb={"1.6rem"}>
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
-          }
-          to="/dashboard-admin"
-        >
-          <Box>
-            <RxDashboard size={20} />
-          </Box>
-          <Text ml={".5rem"}>Dashboard</Text>
-        </NavLink>
-      </Box>
+      {(authCtx.role === "Super Admin" || authCtx.role === "Instructor") && (
+        <Box pl={"2rem"} mb={"1.6rem"}>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
+            }
+            to={`${authCtx.role === "Super Admin" ? "/dashboard-admin" : "/dashboard-instructor"}`}
+          >
+            <Box>
+              <RxDashboard size={20} />
+            </Box>
+            <Text ml={".5rem"}>Dashboard</Text>
+          </NavLink>
+        </Box>
+      )}
 
-      <Box pl={"2rem"} mb={"1.6rem"}>
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
-          }
-          to="/courses"
-        >
-          <Box>
-            <TbBook2 size={20} />
-          </Box>
-          <Text ml={".5rem"}>Courses</Text>
-        </NavLink>
-      </Box>
+      {authCtx.role === "Super Admin" && (
+        <Box pl={"2rem"} mb={"1.6rem"}>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
+            }
+            to="/courses"
+          >
+            <Box>
+              <TbBook2 size={20} />
+            </Box>
+            <Text ml={".5rem"}>Courses</Text>
+          </NavLink>
+        </Box>
+      )}
 
       <Box pl={"2rem"} mb={"1.6rem"}>
         <NavLink
@@ -67,19 +74,21 @@ function SideBar() {
         </NavLink>
       </Box>
 
-      <Box pl={"2rem"} mb={"1.6rem"}>
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
-          }
-          to="/payments"
-        >
-          <Box>
-            <HiOutlineCurrencyDollar size={20} />
-          </Box>
-          <Text ml={".5rem"}>Payments</Text>
-        </NavLink>
-      </Box>
+      {authCtx.role === "Super Admin" && (
+        <Box pl={"2rem"} mb={"1.6rem"}>
+          <NavLink
+            className={(navData) =>
+              navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
+            }
+            to="/payments"
+          >
+            <Box>
+              <HiOutlineCurrencyDollar size={20} />
+            </Box>
+            <Text ml={".5rem"}>Payments</Text>
+          </NavLink>
+        </Box>
+      )}
 
       <Box pl={"2rem"} mb={"1.6rem"}>
         <NavLink

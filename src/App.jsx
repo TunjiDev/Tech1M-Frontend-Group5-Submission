@@ -1,5 +1,6 @@
+import { useContext } from "react";
 import { Box } from "@chakra-ui/react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
@@ -13,78 +14,102 @@ import PaymentsPage from "./pages/PaymentsPage";
 import QuizAssignmentPage from "./pages/QuizAssignmentPage";
 import MessagesPage from "./pages/MessagesPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import AuthContext from "./context-store/authContext";
 
 function App() {
+  const authCtx = useContext(AuthContext);
+
   return (
     <Box>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        {!authCtx.isLoggedIn && <Route path="/" element={<HomePage />} />}
+        {authCtx.isLoggedIn && authCtx.role === "Super Admin" && (
+          <Route path="/" element={<Navigate replace to="/dashboard-admin" />} />
+        )}
+        {authCtx.isLoggedIn && authCtx.role === "Instructor" && (
+          <Route path="/" element={<Navigate replace to="/dashboard-instructor" />} />
+        )}
+        {!authCtx.isLoggedIn && <Route path="/signup" element={<SignupPage />} />}
+        {!authCtx.isLoggedIn && <Route path="/login" element={<LoginPage />} />}
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        <Route
-          path="/dashboard-admin"
-          element={
-            <Wrapper>
-              {" "}
-              <AdminDashboardPage />
-            </Wrapper>
-          }
-        />
-        <Route
-          path="/dashboard-instructor"
-          element={
-            <Wrapper>
-              {" "}
-              <InstructorDashboardPage />
-            </Wrapper>
-          }
-        />
-        <Route
-          path="/courses"
-          element={
-            <Wrapper>
-              {" "}
-              <CoursesPage />
-            </Wrapper>
-          }
-        />
-        <Route
-          path="/students"
-          element={
-            <Wrapper>
-              {" "}
-              <StudentsPage />
-            </Wrapper>
-          }
-        />
-        <Route
-          path="/payments"
-          element={
-            <Wrapper>
-              {" "}
-              <PaymentsPage />
-            </Wrapper>
-          }
-        />
-        <Route
-          path="/quiz-assignment"
-          element={
-            <Wrapper>
-              {" "}
-              <QuizAssignmentPage />
-            </Wrapper>
-          }
-        />
-        <Route
-          path="/messages"
-          element={
-            <Wrapper>
-              {" "}
-              <MessagesPage />
-            </Wrapper>
-          }
-        />
+        {authCtx.isLoggedIn && authCtx.role === "Super Admin" && (
+          <Route
+            path="/dashboard-admin"
+            element={
+              <Wrapper>
+                {" "}
+                <AdminDashboardPage />
+              </Wrapper>
+            }
+          />
+        )}
+
+        {authCtx.isLoggedIn && authCtx.role === "Instructor" && (
+          <Route
+            path="/dashboard-instructor"
+            element={
+              <Wrapper>
+                {" "}
+                <InstructorDashboardPage />
+              </Wrapper>
+            }
+          />
+        )}
+        {authCtx.isLoggedIn && authCtx.role === "Super Admin" && (
+          <Route
+            path="/courses"
+            element={
+              <Wrapper>
+                {" "}
+                <CoursesPage />
+              </Wrapper>
+            }
+          />
+        )}
+        {authCtx.isLoggedIn && (
+          <Route
+            path="/students"
+            element={
+              <Wrapper>
+                {" "}
+                <StudentsPage />
+              </Wrapper>
+            }
+          />
+        )}
+        {authCtx.isLoggedIn && authCtx.role === "Super Admin" && (
+          <Route
+            path="/payments"
+            element={
+              <Wrapper>
+                {" "}
+                <PaymentsPage />
+              </Wrapper>
+            }
+          />
+        )}
+        {authCtx.isLoggedIn && (
+          <Route
+            path="/quiz-assignment"
+            element={
+              <Wrapper>
+                {" "}
+                <QuizAssignmentPage />
+              </Wrapper>
+            }
+          />
+        )}
+        {authCtx.isLoggedIn && (
+          <Route
+            path="/messages"
+            element={
+              <Wrapper>
+                {" "}
+                <MessagesPage />
+              </Wrapper>
+            }
+          />
+        )}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Box>

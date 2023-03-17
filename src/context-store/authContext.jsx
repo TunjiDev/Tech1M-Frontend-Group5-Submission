@@ -24,6 +24,8 @@ const calculateRemainingTime = (expirationTime) => {
 const retrieveStoredToken = () => {
   const storedToken = localStorage.getItem("token");
   const storedExpirationDate = localStorage.getItem("expirationTime");
+  const storedFullName = localStorage.getItem("fullName");
+  const storedRole = localStorage.getItem("role");
 
   const remainingTime = calculateRemainingTime(storedExpirationDate);
 
@@ -39,18 +41,25 @@ const retrieveStoredToken = () => {
   return {
     token: storedToken,
     duration: remainingTime,
+    fullName: storedFullName,
+    role: storedRole,
   };
 };
 
 export const AuthContextProvider = (props) => {
   const tokenData = retrieveStoredToken();
   let initialToken;
+  let initialName;
+  let initialRole;
+
   if (tokenData) {
     initialToken = tokenData.token;
+    initialName = tokenData.fullName;
+    initialRole = tokenData.role;
   }
   const [token, setToken] = useState(initialToken);
-  const [, setFullName] = useState("");
-  const [, setRole] = useState("");
+  const [fullName, setFullName] = useState(initialName);
+  const [role, setRole] = useState(initialRole);
 
   const userIsLoggedIn = !!token;
 
@@ -91,6 +100,8 @@ export const AuthContextProvider = (props) => {
   }, [tokenData, logoutHandler]);
 
   const contextValue = {
+    fullName: fullName,
+    role: role,
     isLoggedIn: userIsLoggedIn,
     login: loginHandler,
     logout: logoutHandler,
