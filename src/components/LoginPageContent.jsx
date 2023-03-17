@@ -122,7 +122,6 @@ function LoginPageContent() {
         }
       })
       .catch((err) => {
-        console.log(err.message);
         setHttpError(err.message);
 
         setTimeout(() => {
@@ -209,7 +208,10 @@ function LoginPageContent() {
                 onChange={passwordChangedHandler}
                 onBlur={passwordBlurHandler}
               />
-              <InputRightElement children={<AiOutlineEye onClick={handleClick} color={"#96C0FF"} />} />
+              <InputRightElement
+                children={<AiOutlineEye onClick={handleClick} color={"#96C0FF"} />}
+                cursor={"pointer"}
+              />
             </InputGroup>
             <FormHelperText
               fontSize={{ base: ".6rem", md: ".75rem", lg: ".75rem" }}

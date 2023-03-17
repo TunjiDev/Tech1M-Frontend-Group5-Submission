@@ -129,15 +129,11 @@ function SignupPageContent() {
         authCtx.userFunc(fullNameValue, roleValue);
 
         const role = localStorage.getItem("role");
-        const fullName = localStorage.getItem("fullName");
-
-        console.log(role, fullName);
 
         if (role === "Super Admin") navigate("/dashboard-admin");
         else if (role === "Instructor") navigate("/dashboard-instructor");
       })
       .catch((err) => {
-        console.log(err.message);
         setHttpError(err.message);
 
         setTimeout(() => {
@@ -250,7 +246,9 @@ function SignupPageContent() {
                 onChange={passwordChangedHandler}
                 onBlur={passwordBlurHandler}
               />
-              <InputRightElement children={<AiOutlineEye onClick={handleClick} color={"#96C0FF"} />} />
+              <InputRightElement
+                children={<AiOutlineEye onClick={handleClick} color={"#96C0FF"} cursor={"pointer"} />}
+              />
             </InputGroup>
             <FormHelperText
               fontSize={{ base: ".6rem", md: ".75rem", lg: ".75rem" }}
