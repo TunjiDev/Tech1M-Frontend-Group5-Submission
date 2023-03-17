@@ -11,7 +11,7 @@ import student6 from "../assets/images/student-progress/student6.png";
 
 function InstructorDashboardPageContent() {
   return (
-    <Box textAlign={"center"} minWidth={"85vw"} height={"100vh"} position={"absolute"} right={0}>
+    <Box w={"full"}>
       <Box mt={"6rem"} px={"1rem"}>
         <Flex
           bg={"#0065FF"}

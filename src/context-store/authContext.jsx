@@ -32,8 +32,6 @@ const retrieveStoredToken = () => {
   if (remainingTime <= 60000) {
     localStorage.removeItem("token");
     localStorage.removeItem("expirationTime");
-    // localStorage.removeItem("fullName");
-    // localStorage.removeItem("role");
 
     return null;
   }
@@ -67,9 +65,6 @@ export const AuthContextProvider = (props) => {
     setToken(null);
     localStorage.removeItem("token");
     localStorage.removeItem("expirationTime");
-    localStorage.removeItem("user");
-    localStorage.removeItem("role");
-    localStorage.removeItem("fullName");
 
     if (logoutTimer) {
       clearTimeout(logoutTimer);

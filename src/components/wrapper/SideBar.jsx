@@ -17,108 +17,107 @@ function SideBar() {
     <Flex
       bg={"#E6F0FF"}
       color={"white"}
-      minWidth={"13vw"}
-      h={"165vh"}
-      position={"absolute"}
-      left={0}
-      top={0}
+      h={"full"}
+      w={"full"}
       zIndex={-1}
-      pt={"7rem"}
+      pt={{ base: "12rem", md: "7rem", lg: "7rem" }}
       direction={"column"}
       justifyContent={"flex-start"}
       alignItems={"flex-start"}
     >
-      {(authCtx.role === "Super Admin" || authCtx.role === "Instructor") && (
+      <Box>
+        {(authCtx.role === "Super Admin" || authCtx.role === "Instructor") && (
+          <Box pl={"2rem"} mb={"1.6rem"}>
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
+              }
+              to={`${authCtx.role === "Super Admin" ? "/dashboard-admin" : "/dashboard-instructor"}`}
+            >
+              <Box>
+                <RxDashboard size={20} />
+              </Box>
+              <Text ml={".5rem"}>Dashboard</Text>
+            </NavLink>
+          </Box>
+        )}
+
+        {authCtx.role === "Super Admin" && (
+          <Box pl={"2rem"} mb={"1.6rem"}>
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
+              }
+              to="/courses"
+            >
+              <Box>
+                <TbBook2 size={20} />
+              </Box>
+              <Text ml={".5rem"}>Courses</Text>
+            </NavLink>
+          </Box>
+        )}
+
         <Box pl={"2rem"} mb={"1.6rem"}>
           <NavLink
             className={(navData) =>
               navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
             }
-            to={`${authCtx.role === "Super Admin" ? "/dashboard-admin" : "/dashboard-instructor"}`}
+            to="/students"
           >
             <Box>
-              <RxDashboard size={20} />
+              <SlGraduation size={20} />
             </Box>
-            <Text ml={".5rem"}>Dashboard</Text>
+            <Text ml={".5rem"}>Students</Text>
           </NavLink>
         </Box>
-      )}
 
-      {authCtx.role === "Super Admin" && (
+        {authCtx.role === "Super Admin" && (
+          <Box pl={"2rem"} mb={"1.6rem"}>
+            <NavLink
+              className={(navData) =>
+                navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
+              }
+              to="/payments"
+            >
+              <Box>
+                <HiOutlineCurrencyDollar size={20} />
+              </Box>
+              <Text ml={".5rem"}>Payments</Text>
+            </NavLink>
+          </Box>
+        )}
+
         <Box pl={"2rem"} mb={"1.6rem"}>
           <NavLink
             className={(navData) =>
               navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
             }
-            to="/courses"
+            to="/quiz-assignment"
           >
             <Box>
-              <TbBook2 size={20} />
+              <MdOutlineAssignment size={20} />
             </Box>
-            <Text ml={".5rem"}>Courses</Text>
+            <Flex ml={".5rem"} direction={"column"}>
+              <Box>Quiz/</Box>
+              <Box>Assignment</Box>
+            </Flex>
           </NavLink>
         </Box>
-      )}
 
-      <Box pl={"2rem"} mb={"1.6rem"}>
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
-          }
-          to="/students"
-        >
-          <Box>
-            <SlGraduation size={20} />
-          </Box>
-          <Text ml={".5rem"}>Students</Text>
-        </NavLink>
-      </Box>
-
-      {authCtx.role === "Super Admin" && (
-        <Box pl={"2rem"} mb={"1.6rem"}>
+        <Box pl={"2rem"}>
           <NavLink
             className={(navData) =>
               navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
             }
-            to="/payments"
+            to="/messages"
           >
             <Box>
-              <HiOutlineCurrencyDollar size={20} />
+              <TbBrandWechat size={20} />
             </Box>
-            <Text ml={".5rem"}>Payments</Text>
+            <Text ml={".5rem"}>Messages</Text>
           </NavLink>
         </Box>
-      )}
-
-      <Box pl={"2rem"} mb={"1.6rem"}>
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
-          }
-          to="/quiz-assignment"
-        >
-          <Box>
-            <MdOutlineAssignment size={20} />
-          </Box>
-          <Flex ml={".5rem"} direction={"column"}>
-            <Box>Quiz/</Box>
-            <Box>Assignment</Box>
-          </Flex>
-        </NavLink>
-      </Box>
-
-      <Box pl={"2rem"}>
-        <NavLink
-          className={(navData) =>
-            navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
-          }
-          to="/messages"
-        >
-          <Box>
-            <TbBrandWechat size={20} />
-          </Box>
-          <Text ml={".5rem"}>Messages</Text>
-        </NavLink>
       </Box>
     </Flex>
   );

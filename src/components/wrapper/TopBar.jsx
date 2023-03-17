@@ -30,15 +30,20 @@ function TopBar() {
       justifyContent={"space-evenly"}
       alignItems={"center"}
       position={"absolute"}
-      top={"1.5rem"}
-      w={"full"}
+      top={{ base: "4rem", md: "1.5rem", lg: "1.5rem" }}
+      w={"100%"}
       px={"2rem"}
+      direction={{ base: "column", md: "row", lg: "row" }}
     >
-      <Box flex={1}>
+      <Box flex={1} mb={{ base: "1rem", md: 0, lg: 0 }}>
         <Image src={logo} alt="Tech1M Juniors Logo" />
       </Box>
 
-      <Box flex={3} ml={"5rem"}>
+      <Box
+        flex={{ base: 1, md: 3, lg: 3 }}
+        ml={{ base: ".5rem", md: "1rem", lg: "5rem" }}
+        mb={{ base: "1rem", md: 0, lg: 0 }}
+      >
         <InputGroup>
           <Input
             type="text"
@@ -50,7 +55,12 @@ function TopBar() {
         </InputGroup>
       </Box>
 
-      <Flex flex={2} justifyContent={"center"} alignItems={"center"}>
+      <Flex
+        flex={{ base: 1, md: 1, lg: 2 }}
+        justifyContent={"center"}
+        alignItems={"center"}
+        mb={{ base: "1rem", md: 0, lg: 0 }}
+      >
         <Box mr={"1rem"} position="relative" cursor={"pointer"}>
           <BsChatSquareDots color={"#96C0FF"} size={20} />
           <Badge

@@ -111,6 +111,9 @@ function LoginPageContent() {
         authCtx.login(data.idToken, expirationTime.toISOString());
 
         const role = localStorage.getItem("role");
+        const fullName = localStorage.getItem("fullName");
+
+        authCtx.userFunc(fullName, roleValue);
 
         if (role === "Super Admin" && roleValue === "Super Admin") navigate("/dashboard-admin");
         else if (role === "Instructor" && roleValue === "Instructor") navigate("/dashboard-instructor");
