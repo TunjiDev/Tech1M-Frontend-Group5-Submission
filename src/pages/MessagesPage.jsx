@@ -10,7 +10,7 @@ function MessagesPage() {
         <meta name="description" content="View all messages!" />
         <link rel="canonical" href="/messages" />
       </Helmet>
-      <MessagesPageContent />;
+      <MessagesPageContent />
     </>
   );
 }

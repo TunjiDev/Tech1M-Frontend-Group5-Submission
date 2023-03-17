@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Text, Heading, Avatar, Progress, AvatarGroup } from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Avatar, Progress, AvatarGroup, useMediaQuery } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import Calendar from "./Calendar";
@@ -26,17 +26,17 @@ const data = [
 ];
 
 function AdminDashboardPageContent() {
+  const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
+
   return (
-    <Box
-      textAlign={"center"}
-      // background={"green"}
-      // color={"white"}
-      minWidth={"85vw"}
-      height={"100vh"}
-      position={"absolute"}
-      right={0}
-    >
-      <Box mt={"6rem"} px={"1rem"}>
+    <Box w={"full"}>
+      <Box
+        mt={{ base: "12rem", md: "6rem", lg: "6rem" }}
+        px={"1rem"}
+        pb={"2rem"}
+        w={{ base: "90%", md: "100%", lg: "100%" }}
+        mx={"auto"}
+      >
         <Flex
           bg={"#0065FF"}
           direction={"column"}
@@ -57,8 +57,14 @@ function AdminDashboardPageContent() {
           </Text>
         </Flex>
 
-        <Flex pt={"1rem"} flexWrap={"wrap"}>
-          <Box flex={1.1} boxShadow={"0px 1px 2px rgba(0, 0, 0, 0.1)"} borderRadius={".5rem"} pt={".5rem"}>
+        <Flex pt={"1rem"} direction={{ base: "column", md: "column", lg: "row" }}>
+          <Box
+            flex={{ base: 1, md: 1, lg: 1.1 }}
+            boxShadow={"0px 1px 2px rgba(0, 0, 0, 0.1)"}
+            borderRadius={".5rem"}
+            pt={".5rem"}
+            mb={{ base: "2rem", md: "2rem", lg: 0 }}
+          >
             <Text textAlign={"start"} color={"#003E9C"} mb={"1rem"} ml={".5rem"}>
               Student's Progress
             </Text>
@@ -169,7 +175,12 @@ function AdminDashboardPageContent() {
             </Flex>
           </Box>
 
-          <Box flex={1.1} ml={"1rem"} pt={".5rem"}>
+          <Box
+            flex={{ base: 1, md: 1, lg: 1.1 }}
+            ml={{ base: 0, md: 0, lg: "1rem" }}
+            pt={".5rem"}
+            mb={{ base: "3rem", md: "3rem", lg: 0 }}
+          >
             <Flex
               justifyContent={"space-around"}
               boxShadow={"0px 1px 2px rgba(0, 0, 0, 0.1)"}
@@ -297,7 +308,12 @@ function AdminDashboardPageContent() {
             </Box>
           </Box>
 
-          <Box flex={0.8} ml={"1rem"} mr={"3rem"}>
+          <Box
+            flex={{ base: 1, md: 1, lg: 0.8 }}
+            ml={{ base: 0, md: 0, lg: "1rem" }}
+            mr={{ base: 0, md: 0, lg: "3rem" }}
+            mb={{ base: "2rem", md: "2rem", lg: 0 }}
+          >
             <Text textAlign={"start"} color={"#003E9C"}>
               Upcoming Lessons
             </Text>
@@ -375,9 +391,9 @@ function AdminDashboardPageContent() {
           </Box>
         </Flex>
 
-        <Flex>
-          <Box mt={"2rem"} flex={2}>
-            <BarChart width={600} height={300} data={data}>
+        <Flex direction={{ base: "column", md: "column", lg: "row" }} alignItems={"center"}>
+          <Flex mt={"2rem"} flex={{ base: 1, md: 1, lg: 2 }} justifyContent={"center"}>
+            <BarChart width={isLowerThan400 ? 300 : 600} height={300} data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="day" />
               <YAxis />
@@ -385,7 +401,7 @@ function AdminDashboardPageContent() {
               <Legend />
               <Bar dataKey="number" fill="#0065ff" barSize={20} />
             </BarChart>
-          </Box>
+          </Flex>
           <Box mt={"2rem"} flex={1}>
             <Calendar />
           </Box>
