@@ -9,7 +9,7 @@ import Wrapper from "./components/wrapper/Wrapper";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
 import InstructorDashboardPage from "./pages/InstructorDashboardPage";
 import CoursesPage from "./pages/CoursesPage";
-import StudentsPage from "./pages/StudentsPage";
+import StudentsInstructorPage from "./pages/StudentsInstructorPage";
 import PaymentsPage from "./pages/PaymentsPage";
 import QuizAssignmentPage from "./pages/QuizAssignmentPage";
 import MessagesPage from "./pages/MessagesPage";
@@ -66,13 +66,13 @@ function App() {
             }
           />
         )}
-        {authCtx.isLoggedIn && (
+        {authCtx.isLoggedIn && authCtx.role === "Instructor" && (
           <Route
-            path="/students"
+            path="/students-instructor"
             element={
               <Wrapper>
                 {" "}
-                <StudentsPage />
+                <StudentsInstructorPage />
               </Wrapper>
             }
           />

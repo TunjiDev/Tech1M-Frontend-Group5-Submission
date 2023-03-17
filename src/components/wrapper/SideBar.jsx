@@ -63,7 +63,7 @@ function SideBar() {
             className={(navData) =>
               navData.isActive ? `${styles.active} ${styles.navbar__active__link}` : `${styles.navbar__link}`
             }
-            to="/students"
+            to={`${authCtx.role === "Instructor" ? "/students-instructor" : "/students-admin"}`}
           >
             <Box>
               <SlGraduation size={20} />
