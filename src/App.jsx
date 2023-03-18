@@ -10,6 +10,7 @@ import AdminDashboardPage from "./pages/AdminDashboardPage";
 import InstructorDashboardPage from "./pages/InstructorDashboardPage";
 import CoursesPage from "./pages/CoursesPage";
 import StudentsInstructorPage from "./pages/StudentsInstructorPage";
+import StudentsAdminPage from "./pages/StudentsAdminPage";
 import PaymentsPage from "./pages/PaymentsPage";
 import QuizAssignmentPage from "./pages/QuizAssignmentPage";
 import MessagesPage from "./pages/MessagesPage";
@@ -87,6 +88,17 @@ function App() {
               <Wrapper>
                 {" "}
                 <StudentsInstructorPage />
+              </Wrapper>
+            }
+          />
+        )}
+        {authCtx.isLoggedIn && authCtx.role === "Super Admin" && (
+          <Route
+            path="/students-admin"
+            element={
+              <Wrapper>
+                {" "}
+                <StudentsAdminPage />
               </Wrapper>
             }
           />

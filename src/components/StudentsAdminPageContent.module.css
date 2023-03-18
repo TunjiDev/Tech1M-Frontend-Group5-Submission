@@ -1,0 +1,19 @@
+.active {
+  color: #003e9c;
+}
+
+.navbar__link {
+  color: #96c0ff;
+}
+
+.thRow {
+  background-color: "#E6F0FF";
+  border-top-left-radius: ".5rem";
+  border-top-right-radius: ".5rem";
+}
+
+tr th {
+  color: "#6BA6FF";
+  font-weight: 500;
+  font-size: ".75rem";
+}
