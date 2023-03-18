@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Box,
   Flex,
@@ -38,7 +38,6 @@ function SignupPageContent() {
   const [isLoading, setIsLoading] = useState(false);
 
   const authCtx = useContext(AuthContext);
-  const navigate = useNavigate();
 
   const handleClick = () => setShow(!show);
 
@@ -127,11 +126,6 @@ function SignupPageContent() {
         const expirationTime = new Date(new Date().getTime() + Number(data.expiresIn * 1000));
         authCtx.login(data.idToken, expirationTime.toISOString());
         authCtx.userFunc(fullNameValue, roleValue);
-
-        const role = localStorage.getItem("role");
-
-        if (role === "Super Admin") navigate("/dashboard-admin");
-        else if (role === "Instructor") navigate("/dashboard-instructor");
       })
       .catch((err) => {
         setHttpError(err.message);
