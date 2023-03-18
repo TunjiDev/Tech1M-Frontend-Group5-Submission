@@ -29,6 +29,20 @@ function App() {
         {authCtx.isLoggedIn && authCtx.role === "Instructor" && (
           <Route path="/" element={<Navigate replace to="/dashboard-instructor" />} />
         )}
+
+        {authCtx.isLoggedIn && authCtx.role === "Super Admin" && (
+          <Route path="/signup" element={<Navigate replace to="/dashboard-admin" />} />
+        )}
+        {authCtx.isLoggedIn && authCtx.role === "Instructor" && (
+          <Route path="/signup" element={<Navigate replace to="/dashboard-instructor" />} />
+        )}
+        {authCtx.isLoggedIn && authCtx.role === "Super Admin" && (
+          <Route path="/login" element={<Navigate replace to="/dashboard-admin" />} />
+        )}
+        {authCtx.isLoggedIn && authCtx.role === "Instructor" && (
+          <Route path="/login" element={<Navigate replace to="/dashboard-instructor" />} />
+        )}
+
         {!authCtx.isLoggedIn && <Route path="/signup" element={<SignupPage />} />}
         {!authCtx.isLoggedIn && <Route path="/login" element={<LoginPage />} />}
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
