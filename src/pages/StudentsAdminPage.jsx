@@ -1,8 +1,8 @@
 import React from "react";
-import StudentsInstructorPageContent from "../components/StudentsInstructorPageContent";
+import StudentsAdminPageContent from "../components/StudentsAdminPageContent";
 import { Helmet } from "react-helmet-async";
 
-function StudentsInstructorPage() {
+function StudentsAdminPage() {
   return (
     <>
       <Helmet>
@@ -10,9 +10,9 @@ function StudentsInstructorPage() {
         <meta name="description" content="Check Student Progress!" />
         <link rel="canonical" href="/students" />
       </Helmet>
-      <StudentsInstructorPageContent />
+      <StudentsAdminPageContent />
     </>
   );
 }
 
-export default StudentsInstructorPage;
+export default StudentsAdminPage;
