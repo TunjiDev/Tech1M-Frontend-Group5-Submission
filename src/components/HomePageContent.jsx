@@ -2,8 +2,8 @@ import React from "react";
 import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./HomePageContent.module.css";
-import { HomeIconComponent } from "../assets/HomeIcon.jsx";
-import { RightArrowIconComponent } from "../assets/RightArrowIcon";
+import { HomeIconComponent } from "../assets/icons/HomeIcon.jsx";
+import { RightArrowIconComponent } from "../assets/icons/RightArrowIcon";
 import logo from "../assets/images/logowhite.png";
 
 function HomePageContent() {

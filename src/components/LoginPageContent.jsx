@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { AiOutlineEye } from "react-icons/ai";
-import { RightArrowIconComponent } from "../assets/RightArrowIcon";
+import { RightArrowIconComponent } from "../assets/icons/RightArrowIcon";
 import logo from "../assets/images/logoblue.png";
 import styles from "./LoginPageContent.module.css";
 import useInput from "../hooks/useInput";
