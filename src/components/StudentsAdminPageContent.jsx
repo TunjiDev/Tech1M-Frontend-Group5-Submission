@@ -10,6 +10,18 @@ import styles from "./StudentsAdminPageContent.module.css";
 
 function StudentsAdminPageContent() {
   const authCtx = useContext(AuthContext);
+  const [nextPage, setNextPage] = React.useState(false);
+  const [prevPage, setPrevPage] = React.useState(true);
+
+  const nextPageHandler = () => {
+    setNextPage(true);
+    setPrevPage(false);
+  };
+
+  const prevPageHandler = () => {
+    setPrevPage(true);
+    setNextPage(false);
+  };
 
   return (
     <Box w={"full"}>
@@ -74,105 +86,204 @@ function StudentsAdminPageContent() {
           </Flex>
         </Flex>
 
-        <TableContainer mt={"2rem"}>
-          <Table variant="simple" spacing={2}>
-            <Thead bg={"#E6F0FF"} borderLeftRadius={".1rem"} borderRightRadius={".1rem"}>
-              <Tr>
-                <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
-                  NAME
-                </Th>
-                <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
-                  COURSE
-                </Th>
-                <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
-                  LEVEL
-                </Th>
-                <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
-                  GUARDIAN CONTACT
-                </Th>
-                <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
-                  SCHOOL NAME
-                </Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Smith Rans</Td>
-                <Td>Fundamentals of Web Development</Td>
-                <Td>Beginner</Td>
-                <Td>+91 8920039</Td>
-                <Td>Montessori College Hilton</Td>
-              </Tr>
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Toms Kid</Td>
-                <Td>App Development</Td>
-                <Td>Intermediate</Td>
-                <Td>+44345 0039</Td>
-                <Td>Teeside Basic School Cardiff</Td>
-              </Tr>
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Tomide Williams</Td>
-                <Td>UI/UX Design Fundamentals</Td>
-                <Td>Advance</Td>
-                <Td>+3431 89239</Td>
-                <Td>Borison Jnr School Newtown</Td>
-              </Tr>
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Chuks Emeka</Td>
-                <Td>Fundamentals of Web Development</Td>
-                <Td>Intermediate</Td>
-                <Td>+91 8920039</Td>
-                <Td>Montessori College Hilton</Td>
-              </Tr>
+        {/* PAGE 1 */}
+        {prevPage && (
+          <TableContainer mt={"2rem"}>
+            <Table variant="simple" spacing={2}>
+              <Thead bg={"#E6F0FF"} borderLeftRadius={".1rem"} borderRightRadius={".1rem"}>
+                <Tr>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    NAME
+                  </Th>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    COURSE
+                  </Th>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    LEVEL
+                  </Th>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    GUARDIAN CONTACT
+                  </Th>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    SCHOOL NAME
+                  </Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Smith Rans</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Beginner</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Toms Kid</Td>
+                  <Td>App Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+44345 0039</Td>
+                  <Td>Teeside Basic School Cardiff</Td>
+                </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Tomide Williams</Td>
+                  <Td>UI/UX Design Fundamentals</Td>
+                  <Td>Advance</Td>
+                  <Td>+3431 89239</Td>
+                  <Td>Borison Jnr School Newtown</Td>
+                </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Chuks Emeka</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
 
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Chuks Emeka</Td>
-                <Td>Fundamentals of Web Development</Td>
-                <Td>Intermediate</Td>
-                <Td>+91 8920039</Td>
-                <Td>Montessori College Hilton</Td>
-              </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Chuks Emeka</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
 
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Chuks Emeka</Td>
-                <Td>Fundamentals of Web Development</Td>
-                <Td>Intermediate</Td>
-                <Td>+91 8920039</Td>
-                <Td>Montessori College Hilton</Td>
-              </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Chuks Emeka</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
 
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Chuks Emeka</Td>
-                <Td>Fundamentals of Web Development</Td>
-                <Td>Intermediate</Td>
-                <Td>+91 8920039</Td>
-                <Td>Montessori College Hilton</Td>
-              </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Chuks Emeka</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
 
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Chuks Emeka</Td>
-                <Td>Fundamentals of Web Development</Td>
-                <Td>Intermediate</Td>
-                <Td>+91 8920039</Td>
-                <Td>Montessori College Hilton</Td>
-              </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Chuks Emeka</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
 
-              <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
-                <Td>Chuks Emeka</Td>
-                <Td>Fundamentals of Web Development</Td>
-                <Td>Intermediate</Td>
-                <Td>+91 8920039</Td>
-                <Td>Montessori College Hilton</Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </TableContainer>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Chuks Emeka</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </TableContainer>
+        )}
+
+        {/* PAGE 2 */}
+        {nextPage && (
+          <TableContainer mt={"2rem"}>
+            <Table variant="simple" spacing={2}>
+              <Thead bg={"#E6F0FF"} borderLeftRadius={".1rem"} borderRightRadius={".1rem"}>
+                <Tr>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    NAME
+                  </Th>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    COURSE
+                  </Th>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    LEVEL
+                  </Th>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    GUARDIAN CONTACT
+                  </Th>
+                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                    SCHOOL NAME
+                  </Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Tomide Williams</Td>
+                  <Td>UI/UX Design Fundamentals</Td>
+                  <Td>Advance</Td>
+                  <Td>+3431 89239</Td>
+                  <Td>Borison Jnr School Newtown</Td>
+                </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Toms Kid</Td>
+                  <Td>App Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+44345 0039</Td>
+                  <Td>Teeside Basic School Cardiff</Td>
+                </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Smith Rans</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Beginner</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Toms Kid</Td>
+                  <Td>App Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+44345 0039</Td>
+                  <Td>Teeside Basic School Cardiff</Td>
+                </Tr>
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Tomide Williams</Td>
+                  <Td>UI/UX Design Fundamentals</Td>
+                  <Td>Advance</Td>
+                  <Td>+3431 89239</Td>
+                  <Td>Borison Jnr School Newtown</Td>
+                </Tr>
+
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Chuks Emeka</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
+
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Chuks Emeka</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Intermediate</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
+
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Smith Rans</Td>
+                  <Td>Fundamentals of Web Development</Td>
+                  <Td>Beginner</Td>
+                  <Td>+91 8920039</Td>
+                  <Td>Montessori College Hilton</Td>
+                </Tr>
+
+                <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
+                  <Td>Tomide Williams</Td>
+                  <Td>UI/UX Design Fundamentals</Td>
+                  <Td>Advance</Td>
+                  <Td>+3431 89239</Td>
+                  <Td>Borison Jnr School Newtown</Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </TableContainer>
+        )}
 
         <Flex mt={"2rem"} color={"#96C0FF"} justifyContent={"center"} alignItems={"center"}>
-          <Text cursor={"pointer"}>
+          <Text onClick={prevPageHandler} cursor={"pointer"}>
             <Image src={leftarrow} />
           </Text>
-          <Text cursor={"pointer"} ml={"1rem"}>
+          <Text onClick={prevPageHandler} cursor={"pointer"} ml={"1rem"}>
             Prev
           </Text>
           <Text
@@ -183,8 +294,9 @@ function StudentsAdminPageContent() {
             py={".1rem"}
             mr={".1rem"}
             ml={".5rem"}
-            color={"#FFFEFE"}
-            bg={"#0065FF"}
+            color={prevPage ? "#FFFEFE" : "#96C0FF"}
+            bg={prevPage && "#0065FF"}
+            onClick={prevPageHandler}
           >
             1
           </Text>
@@ -195,13 +307,16 @@ function StudentsAdminPageContent() {
             px={".5rem"}
             py={".1rem"}
             mr={".5rem"}
+            color={nextPage ? "#FFFEFE" : "#96C0FF"}
+            bg={nextPage && "#0065FF"}
+            onClick={nextPageHandler}
           >
             2
           </Text>
-          <Text cursor={"pointer"} mr={"1rem"}>
+          <Text onClick={nextPageHandler} cursor={"pointer"} mr={"1rem"}>
             Next
           </Text>
-          <Text cursor={"pointer"}>
+          <Text onClick={nextPageHandler} cursor={"pointer"}>
             <Image src={rightarrow} />
           </Text>
         </Flex>
