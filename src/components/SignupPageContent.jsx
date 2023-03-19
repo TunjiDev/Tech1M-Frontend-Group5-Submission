@@ -20,7 +20,7 @@ import styles from "./SignupPageContent.module.css";
 import { IoPersonOutline } from "react-icons/io5";
 import { AiOutlineEye } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
-import { RightArrowIconComponent } from "../assets/RightArrowIcon";
+import { RightArrowIconComponent } from "../assets/icons/RightArrowIcon";
 import logo from "../assets/images/logowhite.png";
 import useInput from "../hooks/useInput";
 import AuthContext from "../context-store/authContext";

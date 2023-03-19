@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Box, Flex, Text, Image, Table, Thead, Tbody, Tr, Th, Td, TableContainer } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import AuthContext from "../context-store/authContext";
-import uparrow from "../assets/uparrow.png";
-import downarrow from "../assets/downarrow.png";
-import leftarrow from "../assets/leftarrow.png";
-import rightarrow from "../assets/rightarrow.png";
+import uparrow from "../assets/icons/uparrow.png";
+import downarrow from "../assets/icons/downarrow.png";
+import leftarrow from "../assets/icons/leftarrow.png";
+import rightarrow from "../assets/icons/rightarrow.png";
 import styles from "./StudentsAdminPageContent.module.css";
 
 function StudentsAdminPageContent() {

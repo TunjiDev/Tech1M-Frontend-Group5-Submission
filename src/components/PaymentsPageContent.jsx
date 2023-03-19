@@ -6,10 +6,10 @@ import AuthContext from "../context-store/authContext";
 import payment1 from "../assets/images/payments/payment-1.png";
 import payment2 from "../assets/images/payments/payment-2.png";
 import payment3 from "../assets/images/payments/payment-3.png";
-import uparrow from "../assets/uparrow.png";
-import downarrow from "../assets/downarrow.png";
-import leftarrow from "../assets/leftarrow.png";
-import rightarrow from "../assets/rightarrow.png";
+import uparrow from "../assets/icons/uparrow.png";
+import downarrow from "../assets/icons/downarrow.png";
+import leftarrow from "../assets/icons/leftarrow.png";
+import rightarrow from "../assets/icons/rightarrow.png";
 
 function PaymentsPageContent() {
   const authCtx = useContext(AuthContext);
