@@ -13,7 +13,9 @@ import course3 from "../assets/images/courses/course3.png";
 import course4 from "../assets/images/courses/course4.jpg";
 import course5 from "../assets/images/courses/course5.jpg";
 import course6 from "../assets/images/courses/course6.jpg";
-import { PaymentIconComponent } from "../assets/icons/PaymentIcon";
+import { StatusUpIcon } from "../assets/icons/StatusUpIcon";
+import { LinearDollarSquareIcon } from "../assets/icons/LinearDollarSquareIcon";
+import { ClockIcon } from "../assets/icons/ClockIcon";
 
 function CoursesPageContent() {
   const authCtx = useContext(AuthContext);
@@ -108,16 +110,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex fontWeight={500} fontSize={".75rem"} color={"#96C0FF"} alignItems={"center"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -139,16 +141,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -170,16 +172,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -201,16 +203,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -232,16 +234,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -263,16 +265,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -295,16 +297,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -326,16 +328,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -357,16 +359,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -388,16 +390,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -419,16 +421,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
@@ -450,16 +452,16 @@ function CoursesPageContent() {
                   Created: January 2023 - 5:30am
                 </Text>
                 <Flex justifyContent={"space-between"} mb={"1rem"}>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent /> $1050
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <LinearDollarSquareIcon /> $1050
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <StatusUpIcon />
                     Beginner
-                  </Text>
-                  <Text fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
-                    <PaymentIconComponent />6 weeks
-                  </Text>
+                  </Flex>
+                  <Flex alignItems={"center"} fontWeight={500} fontSize={".75rem"} color={"#96C0FF"}>
+                    <ClockIcon />6 weeks
+                  </Flex>
                 </Flex>
                 <Text fontWeight={500} fontSize={".75rem"} color={"#A6AEBB"}>
                   42 Modules
