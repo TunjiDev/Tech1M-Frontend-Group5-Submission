@@ -16,7 +16,7 @@ import { BsChatSquareDots, BsGear } from "react-icons/bs";
 import { CiBellOn } from "react-icons/ci";
 import { FaBars } from "react-icons/fa";
 import AuthContext from "../../context-store/authContext";
-import logo from "../../assets/images/logoblue.png";
+import logo from "../../assets/images/logoblue2.png";
 import avatar from "../../assets/images/avatar.png";
 
 function TopBar(props) {
@@ -45,7 +45,7 @@ function TopBar(props) {
       <Flex flex={1} mb={{ base: "1rem", md: 0, lg: 0 }} justifyContent={"space-between"} alignItems={"center"}>
         {isLowerThan400 && <FaBars cursor={"pointer"} color={"#96C0FF"} size={30} onClick={sidebarHandler} />}
         <Box>
-          <Image src={logo} alt="Tech1M Juniors Logo" />
+          <Image src={logo} alt="Tech1M Juniors Logo" w={"70%"} h={"70%"} />
         </Box>
       </Flex>
 
