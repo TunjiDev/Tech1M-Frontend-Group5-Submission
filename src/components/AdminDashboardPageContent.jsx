@@ -32,7 +32,7 @@ function AdminDashboardPageContent() {
     <Box w={"full"}>
       <Box
         mt={{ base: "12rem", md: "6rem", lg: "6rem" }}
-        px={"1rem"}
+        px={{ base: ".2rem", md: "1rem", lg: "1rem" }}
         pb={"2rem"}
         w={{ base: "90%", md: "100%", lg: "100%" }}
         mx={"auto"}
@@ -40,19 +40,19 @@ function AdminDashboardPageContent() {
         <Flex
           bg={"#0065FF"}
           direction={"column"}
-          py={"1rem"}
-          pl={"1rem"}
+          py={{ base: ".5rem", md: "1rem", lg: "1rem" }}
+          pl={{ base: ".5rem", md: "1rem", lg: "1rem" }}
           alignItems={"flex-start"}
           borderRadius={"0.5rem"}
           boxShadow={"0px 3px 4px rgba(0, 0, 0, 0.15)"}
         >
-          <Text fontSize={"0.75rem"} color={"#E6F0FF"}>
+          <Text fontSize={{ base: ".5rem", md: ".75rem", lg: ".75rem" }} color={"#E6F0FF"}>
             Welcome back
           </Text>
-          <Heading as={"h3"} size="lg" color={"#E6F0FF"}>
+          <Heading as={"h3"} size="lg" fontSize={{ base: "1rem", md: "1.3rem", lg: "1.5rem" }} color={"#E6F0FF"}>
             Adams Chuks
           </Heading>
-          <Text fontSize={"0.75rem"} color={"#FFFEFE"}>
+          <Text fontSize={{ base: ".5rem", md: ".75rem", lg: ".75rem" }} color={"#FFFEFE"}>
             Your students completed 74% of the tasks.
           </Text>
         </Flex>

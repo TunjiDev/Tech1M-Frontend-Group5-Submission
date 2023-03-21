@@ -12,47 +12,58 @@ import student1b from "../assets/images/student-progress/student1b.png";
 function StudentsInstructorPageContent() {
   return (
     <Box w={"full"}>
-      <Box mt={"6rem"} px={"1rem"} mb={"2rem"}>
+      <Box mt={{ base: "12rem", md: "6rem", lg: "6rem" }} px={"1rem"} mb={"2rem"}>
         <Flex
           bg={"#0065FF"}
           direction={"column"}
-          py={"2rem"}
-          pl={"1rem"}
+          py={{ base: "1rem", md: "1.5rem", lg: "2rem" }}
+          pl={{ base: ".5rem", md: "1rem", lg: "1rem" }}
           alignItems={"flex-start"}
           borderRadius={"0.5rem"}
           boxShadow={"0px 3px 4px rgba(0, 0, 0, 0.15)"}
         >
-          <Text color={"#E6F0FF"} fontWeight={500} fontSize={"1.5rem"}>
+          <Text color={"#E6F0FF"} fontWeight={500} fontSize={{ base: "1rem", md: "1.3rem", lg: "1.5rem" }}>
             Students
           </Text>
         </Flex>
 
         <Box
-          w={"30%"}
+          w={{ base: "60%", md: "50%", lg: "30%" }}
           boxShadow={"0px 1px 2px rgba(0, 0, 0, 0.1)"}
           py={"1.5rem"}
           px={"1rem"}
           borderRadius={".5rem"}
           mb={"2rem"}
         >
-          <Text textAlign={"start"} color={"#0065FF"}>
+          <Text fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }} textAlign={"start"} color={"#0065FF"}>
             Total Students
           </Text>
-          <Text textAlign={"start"} color={"#003E9C"} fontWeight={500}>
+          <Text
+            fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }}
+            textAlign={"start"}
+            color={"#003E9C"}
+            fontWeight={500}
+          >
             1,759
           </Text>
         </Box>
 
-        <Flex>
+        <Flex direction={{ base: "column", md: "row", lg: "row" }}>
           <Box
             flex={0.8}
             boxShadow={"0px 1px 2px rgba(0, 0, 0, 0.1)"}
             borderRadius={".5rem"}
             pt={".5rem"}
             pb={"1rem"}
-            mr={"2rem"}
+            mr={{ base: 0, md: "1rem", lg: "2rem" }}
           >
-            <Text textAlign={"start"} color={"#003E9C"} mb={"1rem"} ml={".5rem"}>
+            <Text
+              fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }}
+              textAlign={"start"}
+              color={"#003E9C"}
+              mb={"1rem"}
+              ml={".5rem"}
+            >
               Student's Progress
             </Text>
             <Flex mx={".5rem"} mb={".5rem"} bg={"#E6F0FF"} borderRadius={"0.688rem"}>
@@ -166,6 +177,7 @@ function StudentsInstructorPageContent() {
               w={"100%"}
               cursor={"pointer"}
               mt={"1rem"}
+              fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }}
             >
               <Box mr={".5rem"}>
                 <BsThreeDots color={"#0065FF"} />
@@ -176,7 +188,7 @@ function StudentsInstructorPageContent() {
           <Flex
             flex={0.2}
             bg={"#E6F0FF"}
-            mr={"2rem"}
+            mr={{ base: 0, md: "1rem", lg: "2rem" }}
             boxShadow={"0px 1px 2px rgba(0, 0, 0, 0.15)"}
             borderRadius={".5rem"}
             alignItems={"center"}
@@ -188,42 +200,47 @@ function StudentsInstructorPageContent() {
               <Avatar name="Smith Blacks" src={student1b} size="2xl" />
             </Box>
 
-            <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"} mt={".5rem"}>
+            <Text
+              textAlign={"center"}
+              fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }}
+              color={"#0065FF"}
+              mt={".5rem"}
+            >
               Smith Blacks
             </Text>
 
             <Box mt={".5rem"}>
-              <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"}>
+              <Text textAlign={"center"} fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }} color={"#0065FF"}>
                 Course:
               </Text>
-              <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"}>
+              <Text textAlign={"center"} fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }} color={"#0065FF"}>
                 Product Design
               </Text>
             </Box>
 
             <Box mt={".5rem"}>
-              <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"}>
+              <Text textAlign={"center"} fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }} color={"#0065FF"}>
                 Progress:
               </Text>
-              <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"}>
+              <Text textAlign={"center"} fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }} color={"#0065FF"}>
                 36%
               </Text>
             </Box>
 
             <Box mt={".5rem"}>
-              <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"}>
+              <Text textAlign={"center"} fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }} color={"#0065FF"}>
                 Started:
               </Text>
-              <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"}>
+              <Text textAlign={"center"} fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }} color={"#0065FF"}>
                 About a month ago
               </Text>
             </Box>
 
             <Box mt={".5rem"}>
-              <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"}>
+              <Text textAlign={"center"} fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }} color={"#0065FF"}>
                 Payment Status:
               </Text>
-              <Text textAlign={"center"} fontSize={"0.875rem"} color={"#0065FF"}>
+              <Text textAlign={"center"} fontSize={{ base: ".75rem", md: ".875rem", lg: ".875rem" }} color={"#0065FF"}>
                 Completed
               </Text>
             </Box>
@@ -237,6 +254,7 @@ function StudentsInstructorPageContent() {
               w={"100%"}
               cursor={"pointer"}
               mt={"1rem"}
+              fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }}
             >
               <Box mr={".5rem"}>
                 <BsThreeDots color={"#0065FF"} />

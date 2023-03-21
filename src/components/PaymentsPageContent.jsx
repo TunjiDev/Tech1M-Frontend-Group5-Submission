@@ -28,8 +28,13 @@ function PaymentsPageContent() {
 
   return (
     <Box w={"full"}>
-      <Box mt={"6rem"} px={"4rem"} mb={"2rem"}>
-        <Flex justifyContent={"space-between"} mb={"1rem"}>
+      <Box mt={{ base: "12rem", md: "6rem", lg: "6rem" }} px={{ base: "1rem", md: "2rem", lg: "4rem" }} mb={"2rem"}>
+        <Flex
+          direction={{ base: "column", md: "row", lg: "row" }}
+          justifyContent={"space-between"}
+          alignItems={{ base: "center", md: null, lg: null }}
+          mb={"1rem"}
+        >
           <Box>
             <NavLink
               className={(navData) => (navData.isActive ? `${styles.active}` : `${styles.navbar__link}`)}

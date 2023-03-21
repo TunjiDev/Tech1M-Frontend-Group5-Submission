@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   Box,
   Flex,
@@ -14,13 +14,20 @@ import {
 import { CiSearch } from "react-icons/ci";
 import { BsChatSquareDots, BsGear } from "react-icons/bs";
 import { CiBellOn } from "react-icons/ci";
+import { FaBars } from "react-icons/fa";
 import AuthContext from "../../context-store/authContext";
 import logo from "../../assets/images/logoblue.png";
 import avatar from "../../assets/images/avatar.png";
 
-function TopBar() {
+function TopBar(props) {
   const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
   const authCtx = useContext(AuthContext);
+  const [showHamburgerMenu, setShowHamburgerMenu] = useState(true);
+
+  const sidebarHandler = () => {
+    setShowHamburgerMenu(!showHamburgerMenu);
+    props.onClick();
+  };
 
   return (
     <Flex
@@ -35,9 +42,12 @@ function TopBar() {
       px={"2rem"}
       direction={{ base: "column", md: "row", lg: "row" }}
     >
-      <Box flex={1} mb={{ base: "1rem", md: 0, lg: 0 }}>
-        <Image src={logo} alt="Tech1M Juniors Logo" />
-      </Box>
+      <Flex flex={1} mb={{ base: "1rem", md: 0, lg: 0 }} justifyContent={"space-between"} alignItems={"center"}>
+        {isLowerThan400 && <FaBars cursor={"pointer"} color={"#96C0FF"} size={30} onClick={sidebarHandler} />}
+        <Box>
+          <Image src={logo} alt="Tech1M Juniors Logo" />
+        </Box>
+      </Flex>
 
       <Box
         flex={{ base: 1, md: 3, lg: 3 }}
@@ -97,7 +107,9 @@ function TopBar() {
             <Avatar name="Adams Chuks" src={avatar} />
           </Box>
           <Box>
-            <Text color={"#0065FF"}>Adams Chuks</Text>
+            <Text fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }} color={"#0065FF"}>
+              Adams Chuks
+            </Text>
             <Text color={"#6B788E"} fontSize={"0.625rem"} fontWeight={500}>
               {`${authCtx.role === "Super Admin" ? "Super Admin" : "Instructor"}`}
             </Text>
