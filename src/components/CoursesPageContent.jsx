@@ -34,8 +34,13 @@ function CoursesPageContent() {
 
   return (
     <Box w={"full"}>
-      <Box mt={"6rem"} px={"4rem"} mb={"2rem"}>
-        <Flex justifyContent={"space-between"} mb={"1rem"}>
+      <Box mt={{ base: "12rem", md: "6rem", lg: "6rem" }} px={{ base: "1rem", md: "2rem", lg: "4rem" }} mb={"2rem"}>
+        <Flex
+          direction={{ base: "column", md: "row", lg: "row" }}
+          justifyContent={"space-between"}
+          alignItems={{ base: "center", md: null, lg: null }}
+          mb={"1rem"}
+        >
           <Box>
             <NavLink
               className={(navData) => (navData.isActive ? `${styles.active}` : `${styles.navbar__link}`)}
@@ -98,7 +103,7 @@ function CoursesPageContent() {
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} minChildWidth={"17.75rem"} spacing="20px">
           {/* PAGE 1 */}
           {prevPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"} pb={"1rem"}>
               <Box>
                 <Image src={course3} alt="User Experience Design: Figma UI/UX Design" w={"full"} />
               </Box>
@@ -129,7 +134,7 @@ function CoursesPageContent() {
           )}
 
           {prevPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image src={course2} alt="Web Development Fundamentals" w={"full"} />
               </Box>
@@ -160,7 +165,7 @@ function CoursesPageContent() {
           )}
 
           {prevPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image src={course1} alt="App Development Fundamentals" w={"full"} />
               </Box>
@@ -191,7 +196,7 @@ function CoursesPageContent() {
           )}
 
           {prevPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image src={course2} alt="Web Development Fundamentals" w={"full"} />
               </Box>
@@ -222,7 +227,7 @@ function CoursesPageContent() {
           )}
 
           {prevPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image src={course1} alt="App Development Fundamentals" w={"full"} />
               </Box>
@@ -253,7 +258,7 @@ function CoursesPageContent() {
           )}
 
           {prevPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image src={course3} alt="User Experience Design: Figma UI/UX Design" w={"full"} />
               </Box>
@@ -285,7 +290,7 @@ function CoursesPageContent() {
 
           {/* PAGE 2 */}
           {nextPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image w={"full"} h={"152px"} src={course4} alt="DevOps Engineering" />
               </Box>
@@ -316,7 +321,7 @@ function CoursesPageContent() {
           )}
 
           {nextPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image w={"full"} h={"152px"} src={course5} alt="Software Quality Assurance" />
               </Box>
@@ -347,7 +352,7 @@ function CoursesPageContent() {
           )}
 
           {nextPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image w={"full"} h={"152px"} src={course6} alt="Digital Marketing" />
               </Box>
@@ -378,7 +383,7 @@ function CoursesPageContent() {
           )}
 
           {nextPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image src={course2} alt="Web Development Fundamentals" w={"full"} />
               </Box>
@@ -409,7 +414,7 @@ function CoursesPageContent() {
           )}
 
           {nextPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image w={"full"} h={"152px"} src={course6} alt="Digital Marketing" />
               </Box>
@@ -440,7 +445,7 @@ function CoursesPageContent() {
           )}
 
           {nextPage && (
-            <Box height="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
+            <Box minHeight="20rem" border={"1px solid #A6AEBB"} borderRadius={".25rem"}>
               <Box>
                 <Image w={"full"} h={"152px"} src={course5} alt="Software Quality Assurance" />
               </Box>
