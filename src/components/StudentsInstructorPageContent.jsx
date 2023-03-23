@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Text, Avatar, Progress } from "@chakra-ui/react";
+import { Box, Flex, Text, Avatar, Progress, useMediaQuery } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
 import student1 from "../assets/images/student-progress/student1.png";
 import student2 from "../assets/images/student-progress/student2.png";
@@ -10,9 +10,11 @@ import student6 from "../assets/images/student-progress/student6.png";
 import student1b from "../assets/images/student-progress/student1b.png";
 
 function StudentsInstructorPageContent() {
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
+
   return (
     <Box w={"full"}>
-      <Box mt={{ base: "12rem", md: "6rem", lg: "6rem" }} px={"1rem"} mb={"2rem"}>
+      <Box mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "12rem" : "6rem"}` }} px={"1rem"} mb={"2rem"}>
         <Flex
           bg={"#0065FF"}
           direction={"column"}

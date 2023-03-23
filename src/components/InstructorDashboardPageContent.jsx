@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Flex, Text, Heading, Avatar, Progress, Badge } from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Avatar, Progress, Badge, useMediaQuery } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
 import { CiBellOn } from "react-icons/ci";
 import student1 from "../assets/images/student-progress/student1.png";
@@ -10,10 +10,12 @@ import student5 from "../assets/images/student-progress/student5.png";
 import student6 from "../assets/images/student-progress/student6.png";
 
 function InstructorDashboardPageContent() {
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
+
   return (
     <Box w={"full"}>
       <Box
-        mt={{ base: "12rem", md: "6rem", lg: "6rem" }}
+        mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "12rem" : "6rem"}` }}
         px={{ base: ".2rem", md: "1rem", lg: "1rem" }}
         pb={"2rem"}
         w={{ base: "90%", md: "100%", lg: "100%" }}

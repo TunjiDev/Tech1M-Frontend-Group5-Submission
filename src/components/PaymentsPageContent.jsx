@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import styles from "./PaymentsPageContent.module.css";
 import AuthContext from "../context-store/authContext";
@@ -15,6 +15,7 @@ function PaymentsPageContent() {
   const authCtx = useContext(AuthContext);
   const [nextPage, setNextPage] = React.useState(false);
   const [prevPage, setPrevPage] = React.useState(true);
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
 
   const nextPageHandler = () => {
     setNextPage(true);
@@ -28,7 +29,11 @@ function PaymentsPageContent() {
 
   return (
     <Box w={"full"}>
-      <Box mt={{ base: "12rem", md: "6rem", lg: "6rem" }} px={{ base: "1rem", md: "2rem", lg: "4rem" }} mb={"2rem"}>
+      <Box
+        mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "12rem" : "6rem"}` }}
+        px={{ base: "1rem", md: "2rem", lg: "4rem" }}
+        mb={"2rem"}
+      >
         <Flex
           direction={{ base: "column", md: "row", lg: "row" }}
           justifyContent={"space-between"}
