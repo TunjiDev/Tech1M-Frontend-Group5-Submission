@@ -50,7 +50,6 @@ function TopBar(props) {
     localStorage.removeItem("chakra-ui-color-mode");
     authCtx.logout();
     Navigate("/login");
-    console.log(localStorage.getItem("chakra-ui-color-mode"));
   };
 
   return (
