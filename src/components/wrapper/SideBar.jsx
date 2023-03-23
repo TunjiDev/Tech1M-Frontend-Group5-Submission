@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { RxDashboard } from "react-icons/rx";
 import { TbBook2 } from "react-icons/tb";
 import { SlGraduation } from "react-icons/sl";
@@ -12,15 +12,16 @@ import styles from "./SideBar.module.css";
 
 function SideBar() {
   const authCtx = useContext(AuthContext);
+  const [isHigherThan1200] = useMediaQuery("(min-width: 75rem)");
 
   return (
     <Flex
       bg={"#E6F0FF"}
       color={"white"}
-      h={"full"}
+      h={isHigherThan1200 ? "100vh" : "full"}
       w={"full"}
       zIndex={-1}
-      pt={{ base: "12rem", md: "7rem", lg: "7rem" }}
+      pt={{ base: "12rem", md: "7rem", lg: `${isHigherThan1200 ? "12rem" : "7rem"}` }}
       direction={"column"}
       justifyContent={"flex-start"}
       alignItems={"flex-start"}

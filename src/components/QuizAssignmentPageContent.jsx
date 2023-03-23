@@ -1,11 +1,13 @@
 import React from "react";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
 
 function QuizAssignmentPageContent() {
+  const [isHigherThan1200] = useMediaQuery("(min-width: 75rem)");
+
   return (
     <Box w={"full"}>
-      <Box mt={{ base: "12rem", md: "6rem", lg: "6rem" }} px={"1rem"} mb={"2rem"}>
+      <Box mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "12rem" : "6rem"}` }} px={"1rem"} mb={"2rem"}>
         <Flex
           bg={"#0065FF"}
           direction={"column"}

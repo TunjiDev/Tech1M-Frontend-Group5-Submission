@@ -241,7 +241,9 @@ function SignupPageContent() {
                 onBlur={passwordBlurHandler}
               />
               <InputRightElement
-                children={<AiOutlineEye onClick={handleClick} color={"#96C0FF"} cursor={"pointer"} />}
+                children={
+                  <AiOutlineEye onClick={handleClick} color={show ? "#003E9C" : "#96C0FF"} cursor={"pointer"} />
+                }
               />
             </InputGroup>
             <FormHelperText
