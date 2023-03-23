@@ -10,7 +10,7 @@ import student6 from "../assets/images/student-progress/student6.png";
 import student1b from "../assets/images/student-progress/student1b.png";
 
 function StudentsInstructorPageContent() {
-  const [isHigherThan1200] = useMediaQuery("(min-width: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
 
   return (
     <Box w={"full"}>

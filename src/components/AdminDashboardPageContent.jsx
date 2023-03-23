@@ -27,7 +27,7 @@ const data = [
 
 function AdminDashboardPageContent() {
   const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
-  const [isHigherThan1200] = useMediaQuery("(min-width: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
 
   return (
     <Box w={"full"}>

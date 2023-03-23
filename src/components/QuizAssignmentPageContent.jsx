@@ -3,7 +3,7 @@ import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
 
 function QuizAssignmentPageContent() {
-  const [isHigherThan1200] = useMediaQuery("(min-width: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
 
   return (
     <Box w={"full"}>

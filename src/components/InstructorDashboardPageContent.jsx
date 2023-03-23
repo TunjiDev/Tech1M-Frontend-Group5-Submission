@@ -10,7 +10,7 @@ import student5 from "../assets/images/student-progress/student5.png";
 import student6 from "../assets/images/student-progress/student6.png";
 
 function InstructorDashboardPageContent() {
-  const [isHigherThan1200] = useMediaQuery("(min-width: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
 
   return (
     <Box w={"full"}>

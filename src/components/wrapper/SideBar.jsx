@@ -12,7 +12,7 @@ import styles from "./SideBar.module.css";
 
 function SideBar() {
   const authCtx = useContext(AuthContext);
-  const [isHigherThan1200] = useMediaQuery("(min-width: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
 
   return (
     <Flex

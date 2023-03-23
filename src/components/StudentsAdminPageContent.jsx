@@ -25,7 +25,7 @@ function StudentsAdminPageContent() {
   const authCtx = useContext(AuthContext);
   const [nextPage, setNextPage] = React.useState(false);
   const [prevPage, setPrevPage] = React.useState(true);
-  const [isHigherThan1200] = useMediaQuery("(min-width: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
 
   const nextPageHandler = () => {
     setNextPage(true);
