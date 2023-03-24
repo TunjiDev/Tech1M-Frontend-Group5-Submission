@@ -77,7 +77,7 @@ function LoginPageContent() {
     setIsLoading(true);
 
     fetch(
-      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyC1IfGAJVNz0a5P6NNc6fgc1H3S8p9_I54",
+      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.REACT_APP_LOGIN_API_KEY}`,
       {
         method: "POST",
         body: JSON.stringify({
