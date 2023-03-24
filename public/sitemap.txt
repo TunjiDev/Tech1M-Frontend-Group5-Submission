@@ -1,0 +1,13 @@
+https://tech1m-juniors.netlify.app/
+https://tech1m-juniors.netlify.app/login
+https://tech1m-juniors.netlify.app/signup
+https://tech1m-juniors.netlify.app/forgot-password
+https://tech1m-juniors.netlify.app/dashboard-admin
+https://tech1m-juniors.netlify.app/dashboard-instructor
+https://tech1m-juniors.netlify.app/courses
+https://tech1m-juniors.netlify.app/students-instructor
+https://tech1m-juniors.netlify.app/students-admin
+https://tech1m-juniors.netlify.app/payments
+https://tech1m-juniors.netlify.app/quiz-assignment
+https://tech1m-juniors.netlify.app/messages
+https://tech1m-juniors.netlify.app/notifications
