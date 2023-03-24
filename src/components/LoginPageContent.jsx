@@ -165,7 +165,7 @@ function LoginPageContent() {
           position={"absolute"}
           right={{ base: "0rem", md: "5rem", lg: "8rem" }}
           p={{ base: "1rem", md: "2rem", lg: "2rem" }}
-          top={{ base: "16%", md: "10%", lg: "10%" }}
+          top={{ base: "16%", md: "4%", lg: "4%" }}
           borderRadius={"0.5rem"}
         >
           <Flex justifyContent={"center"} alignItems={"center"} mb={"1rem"}>
