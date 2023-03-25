@@ -10,12 +10,12 @@ import student5 from "../assets/images/student-progress/student5.png";
 import student6 from "../assets/images/student-progress/student6.png";
 
 function InstructorDashboardPageContent() {
-  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
 
   return (
     <Box w={"full"}>
       <Box
-        mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "12rem" : "6rem"}` }}
+        mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "8rem" : "6rem"}` }}
         px={{ base: ".2rem", md: "1rem", lg: "1rem" }}
         pb={"2rem"}
         w={{ base: "90%", md: "100%", lg: "100%" }}

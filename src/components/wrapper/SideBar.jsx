@@ -12,7 +12,7 @@ import styles from "./SideBar.module.css";
 
 function SideBar() {
   const authCtx = useContext(AuthContext);
-  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
 
   return (
     <Flex
@@ -20,7 +20,7 @@ function SideBar() {
       h={isHigherThan1200 ? "100vh" : "full"}
       w={"full"}
       zIndex={-1}
-      pt={{ base: "12rem", md: "7rem", lg: `${isHigherThan1200 ? "12rem" : "7rem"}` }}
+      pt={{ base: "12rem", md: "7rem", lg: `${isHigherThan1200 ? "10rem" : "7rem"}` }}
       direction={"column"}
       justifyContent={"flex-start"}
       alignItems={"flex-start"}
