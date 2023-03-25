@@ -1,21 +1,21 @@
 import React from "react";
-import { Flex, Box, useMediaQuery } from "@chakra-ui/react";
+import { Flex, Box, useMediaQuery, useDisclosure } from "@chakra-ui/react";
 import TopBar from "./TopBar";
 import SideBar from "./SideBar";
 import HiddenSideBar from "./HiddenSideBar";
 
 function Wrapper(props) {
   const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
-  const [showSideBar, setShowSideBar] = React.useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const sidebarHandler = () => {
-    setShowSideBar(!showSideBar);
+    onOpen();
   };
 
   return (
     <>
       <TopBar onClick={sidebarHandler} />
-      {showSideBar && <HiddenSideBar onClick={sidebarHandler} />}
+      {isOpen && <HiddenSideBar onClose={onClose} isOpen={isOpen} onClick={sidebarHandler} />}
       <Flex>
         <Box display={isLowerThan400 ? "none" : null} flex={{ base: 0, md: 0.15, lg: 0.15 }}>
           <SideBar />

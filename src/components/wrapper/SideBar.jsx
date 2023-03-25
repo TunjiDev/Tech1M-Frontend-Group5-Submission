@@ -17,7 +17,6 @@ function SideBar() {
   return (
     <Flex
       bg={"#E6F0FF"}
-      color={"white"}
       h={isHigherThan1200 ? "100vh" : "full"}
       w={"full"}
       zIndex={-1}
