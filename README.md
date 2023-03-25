@@ -4,6 +4,13 @@ https://tech1m-juniors.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Environment Variables
+
+The following environment variables were used:
+REACT_APP_SIGNUP_API_KEY
+REACT_APP_LOGIN_API_KEY
+Pls add them to your project locally.
+
 ## Tech Stacks
 
 - ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white)
