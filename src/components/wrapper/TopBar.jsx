@@ -22,6 +22,7 @@ import {
   Button,
   useColorMode,
   Switch,
+  Tooltip,
 } from "@chakra-ui/react";
 import { CiSearch } from "react-icons/ci";
 import { BsChatSquareDots, BsGear } from "react-icons/bs";
@@ -173,9 +174,11 @@ function TopBar(props) {
             </Box>
           </Flex>
 
-          <Box cursor={"pointer"} onClick={onOpen}>
-            <BsGear color={"#96C0FF"} />
-          </Box>
+          <Tooltip label={"Logout / Change color mode?"} placement={"bottom"}>
+            <Box cursor={"pointer"} onClick={onOpen}>
+              <BsGear color={"#96C0FF"} />
+            </Box>
+          </Tooltip>
         </Flex>
       </Flex>
     </>
