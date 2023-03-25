@@ -8,7 +8,7 @@ import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { MdOutlineAssignment } from "react-icons/md";
 import { TbBrandWechat } from "react-icons/tb";
 import AuthContext from "../../context-store/authContext";
-import styles from "./SideBar.module.css";
+import styles from "./HiddenSideBar.module.css";
 
 function HiddenSideBar(props) {
   const authCtx = useContext(AuthContext);
