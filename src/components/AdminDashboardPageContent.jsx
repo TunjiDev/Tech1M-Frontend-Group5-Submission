@@ -27,12 +27,12 @@ const data = [
 
 function AdminDashboardPageContent() {
   const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
-  const [isHigherThan1200] = useMediaQuery("(min-height: 75rem)");
+  const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
 
   return (
     <Box w={"full"}>
       <Box
-        mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "12rem" : "6rem"}` }}
+        mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "8rem" : "6rem"}` }}
         px={{ base: ".2rem", md: "1rem", lg: "1rem" }}
         pb={"2rem"}
         w={{ base: "90%", md: "100%", lg: "100%" }}
