@@ -21,7 +21,7 @@ Add them to your project before starting the server locally.
 
 - ![ContextAPI](https://img.shields.io/badge/-ContextAPI-3178C6?style=flat-square&logo=react&logoColor=white)
 
-  ContextAPI is a global state management feature of React that allows you to share data between components without passing props manually.
+  ContextAPI is a global state management feature of React that allows you to share data between components without passing props manually. This was used for authentication of the app.
 
 - ![LocalStorage](https://img.shields.io/badge/-LocalStorage-4285F4?style=flat-square&logo=google&logoColor=white)
 
