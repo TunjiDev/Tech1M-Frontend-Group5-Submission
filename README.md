@@ -8,8 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The following environment variables were used:
 REACT_APP_SIGNUP_API_KEY
+
 REACT_APP_LOGIN_API_KEY
-Pls add them to your project locally.
+
+Add them to your project before starting the server locally.
 
 ## Tech Stacks
 
