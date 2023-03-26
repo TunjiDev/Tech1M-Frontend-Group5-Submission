@@ -8,8 +8,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The following environment variables were used:
 REACT_APP_SIGNUP_API_KEY
+
 REACT_APP_LOGIN_API_KEY
-Pls add them to your project locally.
+
+Add them to your project before starting the server locally.
 
 ## Tech Stacks
 
@@ -19,7 +21,7 @@ Pls add them to your project locally.
 
 - ![ContextAPI](https://img.shields.io/badge/-ContextAPI-3178C6?style=flat-square&logo=react&logoColor=white)
 
-  ContextAPI is a global state management feature of React that allows you to share data between components without passing props manually.
+  ContextAPI is a global state management feature of React that allows you to share data between components without passing props manually. This was used for authentication of the app.
 
 - ![LocalStorage](https://img.shields.io/badge/-LocalStorage-4285F4?style=flat-square&logo=google&logoColor=white)
 
