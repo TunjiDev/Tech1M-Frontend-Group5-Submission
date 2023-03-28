@@ -220,7 +220,7 @@ function LoginPageContent() {
               fontSize={{ base: ".6rem", md: ".75rem", lg: ".75rem" }}
               color={`${passwordInputHasError ? "#fa0724" : "#C2C7D0"}`}
             >
-              Enter your password
+              {passwordInputHasError ? "Password should be at least 8 characters long" : "Enter your password"}
             </FormHelperText>
           </Box>
 
