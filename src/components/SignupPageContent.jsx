@@ -250,7 +250,7 @@ function SignupPageContent() {
               fontSize={{ base: ".6rem", md: ".75rem", lg: ".75rem" }}
               color={`${passwordInputHasError ? "#fa0724" : "#C2C7D0"}`}
             >
-              Enter a strong password
+              {passwordInputHasError ? "Password should be at least 8 characters long" : "Enter a strong password"}
             </FormHelperText>
           </Box>
 
