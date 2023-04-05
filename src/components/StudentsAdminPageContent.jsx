@@ -26,6 +26,7 @@ function StudentsAdminPageContent() {
   const [nextPage, setNextPage] = React.useState(false);
   const [prevPage, setPrevPage] = React.useState(true);
   const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
+  const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
 
   const nextPageHandler = () => {
     setNextPage(true);
@@ -41,7 +42,7 @@ function StudentsAdminPageContent() {
     <Box w={"full"}>
       <Box
         mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "8rem" : "6rem"}` }}
-        px={{ base: "1rem", md: "2rem", lg: "2rem" }}
+        px={{ base: ".5rem", md: "2rem", lg: "2rem" }}
         mb={"2rem"}
       >
         <Flex
@@ -111,28 +112,48 @@ function StudentsAdminPageContent() {
 
         {/* PAGE 1 */}
         {prevPage && (
-          <TableContainer mt={"2rem"}>
-            <Table variant="simple" spacing={2}>
+          <TableContainer mt={"2rem"} w={isLowerThan400 ? "22rem" : null}>
+            <Table variant="simple">
               <Thead bg={"#E6F0FF"} borderLeftRadius={".1rem"} borderRightRadius={".1rem"}>
                 <Tr>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     NAME
                   </Th>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     COURSE
                   </Th>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     LEVEL
                   </Th>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     GUARDIAN CONTACT
                   </Th>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     SCHOOL NAME
                   </Th>
                 </Tr>
               </Thead>
-              <Tbody>
+              <Tbody fontSize={isLowerThan400 ? ".625rem" : null}>
                 <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
                   <Td>Smith Rans</Td>
                   <Td>Fundamentals of Web Development</Td>
@@ -208,28 +229,48 @@ function StudentsAdminPageContent() {
 
         {/* PAGE 2 */}
         {nextPage && (
-          <TableContainer mt={"2rem"}>
+          <TableContainer mt={"2rem"} w={isLowerThan400 ? "22rem" : null}>
             <Table variant="simple" spacing={2}>
               <Thead bg={"#E6F0FF"} borderLeftRadius={".1rem"} borderRightRadius={".1rem"}>
                 <Tr>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     NAME
                   </Th>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     COURSE
                   </Th>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     LEVEL
                   </Th>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     GUARDIAN CONTACT
                   </Th>
-                  <Th color={"#6BA6FF"} fontWeight={500} fontSize={".75rem"}>
+                  <Th
+                    color={"#6BA6FF"}
+                    fontWeight={isLowerThan400 ? 400 : 500}
+                    fontSize={isLowerThan400 ? ".5rem" : ".75rem"}
+                  >
                     SCHOOL NAME
                   </Th>
                 </Tr>
               </Thead>
-              <Tbody>
+              <Tbody fontSize={isLowerThan400 ? ".625rem" : null}>
                 <Tr bg={"#F5F6F7"} color={"#003E9C"} mt={".5rem"}>
                   <Td>Tomide Williams</Td>
                   <Td>UI/UX Design Fundamentals</Td>

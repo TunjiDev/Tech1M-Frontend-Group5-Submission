@@ -1,8 +1,8 @@
 .background {
   background: url("../assets/images/login-screen.png");
-  background-position: "center";
-  background-repeat: "no-repeat";
-  background-size: "cover";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .link {
