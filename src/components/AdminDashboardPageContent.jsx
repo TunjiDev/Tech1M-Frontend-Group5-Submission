@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Flex, Text, Heading, Avatar, Progress, AvatarGroup, useMediaQuery } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { BsThreeDots } from "react-icons/bs";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import Calendar from "./Calendar";
@@ -28,6 +29,7 @@ const data = [
 function AdminDashboardPageContent() {
   const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
   const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
+  const navigate = useNavigate();
 
   return (
     <Box w={"full"}>
@@ -205,6 +207,7 @@ function AdminDashboardPageContent() {
                 py={".3rem"}
                 w={"40%"}
                 cursor={"pointer"}
+                onClick={() => navigate("/courses")}
               >
                 <Box mr={".5rem"}>
                   <BsThreeDots color={"#0065FF"} />
@@ -236,6 +239,7 @@ function AdminDashboardPageContent() {
                 py={".3rem"}
                 w={"40%"}
                 cursor={"pointer"}
+                onClick={() => navigate("/students-admin")}
               >
                 <Box mr={".5rem"}>
                   <BsThreeDots color={"#0065FF"} />
@@ -267,6 +271,7 @@ function AdminDashboardPageContent() {
                 py={".3rem"}
                 w={"40%"}
                 cursor={"pointer"}
+                onClick={() => navigate("/courses")}
               >
                 <Box mr={".5rem"}>
                   <BsThreeDots color={"#0065FF"} />

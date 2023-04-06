@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Flex, Text, Avatar, Progress, useMediaQuery } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { BsThreeDots } from "react-icons/bs";
 import student1 from "../assets/images/student-progress/student1.png";
 import student2 from "../assets/images/student-progress/student2.png";
@@ -11,6 +12,7 @@ import student1b from "../assets/images/student-progress/student1b.png";
 
 function StudentsInstructorPageContent() {
   const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
+  const navigate = useNavigate();
 
   return (
     <Box w={"full"}>
@@ -257,6 +259,7 @@ function StudentsInstructorPageContent() {
               cursor={"pointer"}
               mt={"1rem"}
               fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }}
+              onClick={() => navigate("/messages")}
             >
               <Box mr={".5rem"}>
                 <BsThreeDots color={"#0065FF"} />
