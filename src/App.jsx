@@ -46,7 +46,7 @@ function App() {
 
         {!authCtx.isLoggedIn && <Route path="/signup" element={<SignupPage />} />}
         {!authCtx.isLoggedIn && <Route path="/login" element={<LoginPage />} />}
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        {!authCtx.isLoggedIn && <Route path="/forgot-password" element={<ForgotPasswordPage />} />}
         {authCtx.isLoggedIn && authCtx.role === "Super Admin" && (
           <Route
             path="/dashboard-admin"
