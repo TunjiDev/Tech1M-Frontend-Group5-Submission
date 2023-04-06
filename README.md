@@ -10,7 +10,40 @@ The following environment variables were used:
 
 REACT_APP_API_KEY
 
-Add them to your project before starting the server locally.
+Kindly add it to your project before starting the server locally.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+# User Authentication and Authorization
+
+This section describes how users can sign up, log in, and reset their passwords, as well as the validation rules and access controls in place to ensure only authorized users can access certain features of the application.
+
+"Visitors and first-time users are taken to the welcome screen, which is the index route ("/").
+
+Clicking the "Let's Get Started" button takes the user to the signup page where they can register. They will be routed to "/signup".
+
+Clicking "login" takes the user to the login page ("/login").
+
+Users who are not logged in and have forgotten their passwords can click the "forgot password" link on the login page to go to the "forgot password" page ("/forgot-password"). When users enter their valid email addresses to reset their passwords, they will receive an email with a link to reset the password and then be redirected to the login page.
+
+VALIDATION:\
+If users enter incorrect details such as wrong passwords or emails during sign up or login, they will receive validation errors.
+
+You can sign up as either an instructor or a super admin.
+
+AUTHENTICATION & AUTHORIZATION:\
+Only registered or logged-in users can access the admin dashboard.
+Logged-in users can no longer visit the login page."
 
 ## Tech Stacks
 
@@ -45,15 +78,3 @@ Add them to your project before starting the server locally.
 - ![React Icons](https://img.shields.io/badge/-React%20Icons-61DAFB?style=flat-square&logo=react&logoColor=white)
 
   React Icons is a collection of icons for React applications.
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.

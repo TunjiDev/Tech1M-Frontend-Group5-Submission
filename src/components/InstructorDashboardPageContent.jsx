@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Flex, Text, Heading, Avatar, Progress, Badge, useMediaQuery } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import { BsThreeDots } from "react-icons/bs";
 import { CiBellOn } from "react-icons/ci";
 import student1 from "../assets/images/student-progress/student1.png";
@@ -11,6 +12,7 @@ import student6 from "../assets/images/student-progress/student6.png";
 
 function InstructorDashboardPageContent() {
   const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
+  const navigate = useNavigate();
 
   return (
     <Box w={"full"}>
@@ -171,6 +173,7 @@ function InstructorDashboardPageContent() {
               m={"0 auto"}
               cursor={"pointer"}
               fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }}
+              onClick={() => navigate("/students-instructor")}
             >
               <Box mr={".5rem"}>
                 <BsThreeDots color={"#0065FF"} />
@@ -209,6 +212,7 @@ function InstructorDashboardPageContent() {
                 py={".3rem"}
                 w={"40%"}
                 cursor={"pointer"}
+                onClick={() => navigate("/students-instructor")}
               >
                 <Box mr={".5rem"}>
                   <BsThreeDots color={"#0065FF"} />
@@ -295,6 +299,7 @@ function InstructorDashboardPageContent() {
                 py={".5rem"}
                 cursor={"pointer"}
                 fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }}
+                onClick={() => navigate("/messages")}
               >
                 <Box mr={".5rem"}>
                   <BsThreeDots color={"#0065FF"} />
@@ -397,6 +402,7 @@ function InstructorDashboardPageContent() {
               py={".5rem"}
               cursor={"pointer"}
               fontSize={{ base: "0.875rem", md: "1rem", lg: "1rem" }}
+              onClick={() => navigate("/quiz-assignment")}
             >
               <Box mr={".5rem"}>
                 <BsThreeDots color={"#0065FF"} />
