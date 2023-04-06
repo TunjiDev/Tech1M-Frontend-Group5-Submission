@@ -95,7 +95,7 @@ function SignupPageContent() {
     }
     setIsLoading(true);
 
-    fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.REACT_APP_SIGNUP_API_KEY}`, {
+    fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.REACT_APP_API_KEY}`, {
       method: "POST",
       body: JSON.stringify({
         email: emailValue,
