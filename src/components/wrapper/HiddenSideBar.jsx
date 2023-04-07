@@ -13,6 +13,7 @@ import styles from "./HiddenSideBar.module.css";
 
 function HiddenSideBar(props) {
   const authCtx = useContext(AuthContext);
+  // console.log("testing")
 
   return (
     <Drawer onClose={props.onClose} isOpen={props.isOpen} size={"xs"} placement={"left"} bg={"rgba(0, 0, 0, 0.9)"}>
