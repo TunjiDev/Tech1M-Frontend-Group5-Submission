@@ -49,13 +49,13 @@ function AdminDashboardPageContent() {
           borderRadius={"0.5rem"}
           boxShadow={"0px 3px 4px rgba(0, 0, 0, 0.15)"}
         >
-          <Text fontSize={{ base: ".5rem", md: ".75rem", lg: ".75rem" }} color={"#E6F0FF"}>
+          <Text fontSize={".75rem"} color={"#E6F0FF"}>
             Welcome back
           </Text>
           <Heading as={"h3"} size="lg" fontSize={{ base: "1rem", md: "1.3rem", lg: "1.5rem" }} color={"#E6F0FF"}>
             Adams Chuks
           </Heading>
-          <Text fontSize={{ base: ".5rem", md: ".75rem", lg: ".75rem" }} color={"#FFFEFE"}>
+          <Text fontSize={".75rem"} color={"#FFFEFE"}>
             Your students completed 74% of the tasks.
           </Text>
         </Flex>

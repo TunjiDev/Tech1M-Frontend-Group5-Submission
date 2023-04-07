@@ -7,6 +7,7 @@ import { SlGraduation } from "react-icons/sl";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { MdOutlineAssignment } from "react-icons/md";
 import { TbBrandWechat } from "react-icons/tb";
+import { AiOutlineClose } from "react-icons/ai";
 import AuthContext from "../../context-store/authContext";
 import styles from "./HiddenSideBar.module.css";
 
@@ -17,6 +18,11 @@ function HiddenSideBar(props) {
     <Drawer onClose={props.onClose} isOpen={props.isOpen} size={"xs"} placement={"left"} bg={"rgba(0, 0, 0, 0.9)"}>
       <DrawerOverlay />
       <DrawerContent bg={"rgba(0, 0, 0, 0.9)"}>
+        <Flex justifyContent={"flex-end"} alignItems={"center"}>
+          <Box>
+            <AiOutlineClose color={"FFFFFF"} size={30} onClick={props.onClose} />
+          </Box>
+        </Flex>
         <Flex
           h={"100vh"}
           w={"100%"}
