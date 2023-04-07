@@ -83,7 +83,7 @@ function TopBar(props) {
       </Modal>
 
       <Flex
-        bg={"#FFFEFE"}
+        bg={{ base: null, md: "#FFFEFE", lg: "#FFFEFE" }}
         zIndex={10}
         h={"10vh"}
         justifyContent={"space-evenly"}

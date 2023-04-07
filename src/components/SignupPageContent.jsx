@@ -164,10 +164,10 @@ function SignupPageContent() {
       />
       <FormControl
         bg={"white"}
-        w={{ base: "98%", md: "50%", lg: "50%" }}
+        w={{ base: "100%", md: "50%", lg: "50%" }}
         minHeight={"70vh"}
         position={"absolute"}
-        right={{ base: "1rem", md: "5rem", lg: "10rem" }}
+        right={{ base: "0rem", md: "5rem", lg: "10rem" }}
         p={{ base: "1rem", md: "2rem", lg: "2rem" }}
         top={{ base: "16%", md: "10%", lg: "10%" }}
         borderRadius={"0.5rem"}
