@@ -187,6 +187,7 @@ function SignupPageContent() {
                 value={fullNameValue}
                 onChange={fullNameChangedHandler}
                 onBlur={fullNameBlurHandler}
+                color={"black"}
               />
               <InputRightElement children={<IoPersonOutline color={"#96C0FF"} />} />
             </InputGroup>
@@ -212,6 +213,7 @@ function SignupPageContent() {
                 value={emailValue}
                 onChange={emailChangedHandler}
                 onBlur={emailBlurHandler}
+                color={"black"}
               />
               <InputRightElement children={<EmailIcon color={"#96C0FF"} />} />
             </InputGroup>
@@ -239,6 +241,7 @@ function SignupPageContent() {
                 value={passwordValue}
                 onChange={passwordChangedHandler}
                 onBlur={passwordBlurHandler}
+                color={"black"}
               />
               <InputRightElement
                 children={
@@ -268,6 +271,7 @@ function SignupPageContent() {
                 value={phoneNumberValue}
                 onChange={phoneNumberChangedHandler}
                 onBlur={phoneNumberBlurHandler}
+                color={"black"}
               />
               <InputRightElement children={<BsTelephone color={"#96C0FF"} />} />
             </InputGroup>
@@ -290,6 +294,7 @@ function SignupPageContent() {
           value={roleValue}
           onChange={roleChangedHandler}
           onBlur={roleBlurHandler}
+          color={"black"}
         >
           <option>Super Admin</option>
           <option>Instructor</option>
