@@ -185,6 +185,7 @@ function LoginPageContent() {
                 onChange={emailChangedHandler}
                 onBlur={emailBlurHandler}
                 required
+                color={"black"}
               />
               <InputRightElement children={<EmailIcon color={"#96C0FF"} />} />
             </InputGroup>
@@ -210,6 +211,7 @@ function LoginPageContent() {
                 value={passwordValue}
                 onChange={passwordChangedHandler}
                 onBlur={passwordBlurHandler}
+                color={"black"}
               />
               <InputRightElement
                 children={<AiOutlineEye onClick={handleClick} color={show ? "#003E9C" : "#96C0FF"} />}
@@ -234,6 +236,7 @@ function LoginPageContent() {
             value={roleValue}
             onChange={roleChangedHandler}
             onBlur={roleBlurHandler}
+            color={"black"}
           >
             <option>Super Admin</option>
             <option>Instructor</option>
