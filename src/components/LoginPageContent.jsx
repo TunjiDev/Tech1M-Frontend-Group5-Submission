@@ -29,7 +29,7 @@ const isRole = (value) => value === "Super Admin" || value === "Instructor";
 
 function LoginPageContent() {
   const [show, setShow] = React.useState(false);
-  const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
+  const [isWidthLowerThan400] = useMediaQuery("(max-width: 30rem)");
   const [httpError, setHttpError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -179,7 +179,7 @@ function LoginPageContent() {
               <Input
                 type="email"
                 id="email"
-                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
                 placeholder="example@gmail.com"
                 value={emailValue}
                 onChange={emailChangedHandler}
@@ -205,7 +205,7 @@ function LoginPageContent() {
               <Input
                 type={show ? "text" : "password"}
                 id="password"
-                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
                 placeholder="Enter password"
                 required
                 value={passwordValue}
@@ -230,7 +230,7 @@ function LoginPageContent() {
             Role
           </FormLabel>
           <Select
-            sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+            sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
             placeholder="Select Role"
             required
             value={roleValue}

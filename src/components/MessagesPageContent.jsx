@@ -21,12 +21,12 @@ import student4 from "../assets/images/student-progress/student4.png";
 import sendicon from "../assets/icons/sendicon.png";
 
 function MessagesPageContent() {
-  const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
-  const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
+  const [isWidthLowerThan400] = useMediaQuery("(max-width: 30rem)");
+  const [isHeightThan1200] = useMediaQuery("(min-height: 62.5rem)");
 
   return (
     <Box w={"full"}>
-      <Box mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "8rem" : "6rem"}` }} px={"1rem"} mb={"2rem"}>
+      <Box mt={{ base: "12rem", md: "6rem", lg: `${isHeightThan1200 ? "8rem" : "6rem"}` }} px={"1rem"} mb={"2rem"}>
         <Flex
           bg={"#0065FF"}
           direction={"column"}
@@ -295,7 +295,7 @@ function MessagesPageContent() {
                   h={"5.563rem"}
                   type="email"
                   id="email"
-                  sx={{ "::placeholder": { color: "#5D6B82", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+                  sx={{ "::placeholder": { color: "#5D6B82", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
                   placeholder="Type your message..."
                 />
                 <InputRightElement

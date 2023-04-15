@@ -33,7 +33,7 @@ const isRole = (value) => value === "Super Admin" || value === "Instructor";
 
 function SignupPageContent() {
   const [show, setShow] = React.useState(false);
-  const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
+  const [isWidthLowerThan400] = useMediaQuery("(max-width: 30rem)");
   const [httpError, setHttpError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -181,7 +181,7 @@ function SignupPageContent() {
               <Input
                 type="text"
                 id="full-name"
-                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
                 placeholder="Adams Chuks"
                 required
                 value={fullNameValue}
@@ -207,7 +207,7 @@ function SignupPageContent() {
               <Input
                 type="email"
                 id="email"
-                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
                 placeholder="example@gmail.com"
                 required
                 value={emailValue}
@@ -235,7 +235,7 @@ function SignupPageContent() {
               <Input
                 type={show ? "text" : "password"}
                 id="password"
-                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
                 placeholder="Enter password"
                 required
                 value={passwordValue}
@@ -265,7 +265,7 @@ function SignupPageContent() {
               <Input
                 type="tel"
                 id="phone-number"
-                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+                sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
                 placeholder="phone number"
                 required
                 value={phoneNumberValue}
@@ -288,7 +288,7 @@ function SignupPageContent() {
           Role
         </FormLabel>
         <Select
-          sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+          sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
           placeholder="Select Role"
           required
           value={roleValue}
