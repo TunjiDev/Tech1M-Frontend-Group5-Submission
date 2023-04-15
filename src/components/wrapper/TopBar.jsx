@@ -34,7 +34,7 @@ import avatar from "../../assets/images/avatar.png";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 function TopBar(props) {
-  const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
+  const [isWidthLowerThan400] = useMediaQuery("(max-width: 30rem)");
   const authCtx = useContext(AuthContext);
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(true);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -95,13 +95,13 @@ function TopBar(props) {
         direction={{ base: "column", md: "row", lg: "row" }}
       >
         <Flex flex={1} mb={{ base: "1rem", md: 0, lg: 0 }} justifyContent={"space-between"} alignItems={"center"}>
-          {isLowerThan400 && <FaBars cursor={"pointer"} color={"#96C0FF"} size={30} onClick={sidebarHandler} />}
+          {isWidthLowerThan400 && <FaBars cursor={"pointer"} color={"#96C0FF"} size={30} onClick={sidebarHandler} />}
           <Box>
             <Image
               src={logo}
               alt="Tech1M Juniors Logo"
-              w={isLowerThan400 ? "50%" : "70%"}
-              h={isLowerThan400 ? "50%" : "70%"}
+              w={isWidthLowerThan400 ? "50%" : "70%"}
+              h={isWidthLowerThan400 ? "50%" : "70%"}
               m={"auto"}
             />
           </Box>
@@ -116,7 +116,7 @@ function TopBar(props) {
             <Input
               type="text"
               id="search"
-              sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+              sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
               placeholder="Search"
             />
             <InputLeftElement children={<CiSearch color={"#96C0FF"} size={26} />} />

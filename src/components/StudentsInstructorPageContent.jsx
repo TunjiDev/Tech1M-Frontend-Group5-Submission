@@ -11,12 +11,12 @@ import student6 from "../assets/images/student-progress/student6.png";
 import student1b from "../assets/images/student-progress/student1b.png";
 
 function StudentsInstructorPageContent() {
-  const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
+  const [isHeightThan1200] = useMediaQuery("(min-height: 62.5rem)");
   const navigate = useNavigate();
 
   return (
     <Box w={"full"}>
-      <Box mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "8rem" : "6rem"}` }} px={"1rem"} mb={"2rem"}>
+      <Box mt={{ base: "12rem", md: "6rem", lg: `${isHeightThan1200 ? "8rem" : "6rem"}` }} px={"1rem"} mb={"2rem"}>
         <Flex
           bg={"#0065FF"}
           direction={"column"}

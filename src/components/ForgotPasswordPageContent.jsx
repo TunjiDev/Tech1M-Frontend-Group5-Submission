@@ -23,7 +23,7 @@ import styles from "./ForgotPasswordPageContent.module.css";
 function ForgotPasswordPageContent() {
   const [httpError, setHttpError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
+  const [isWidthLowerThan400] = useMediaQuery("(max-width: 30rem)");
   const [emailSent, setEmailSent] = useState(false);
   const navigate = useNavigate();
 
@@ -125,7 +125,7 @@ function ForgotPasswordPageContent() {
             <Input
               type="email"
               id="email"
-              sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isLowerThan400 ? ".7rem" : "1rem"}` } }}
+              sx={{ "::placeholder": { color: "#96C0FF", fontSize: `${isWidthLowerThan400 ? ".7rem" : "1rem"}` } }}
               placeholder="example@gmail.com"
               value={emailValue}
               onChange={emailChangedHandler}

@@ -15,7 +15,7 @@ function PaymentsPageContent() {
   const authCtx = useContext(AuthContext);
   const [nextPage, setNextPage] = React.useState(false);
   const [prevPage, setPrevPage] = React.useState(true);
-  const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
+  const [isHeightThan1200] = useMediaQuery("(min-height: 62.5rem)");
 
   const nextPageHandler = () => {
     setNextPage(true);
@@ -30,7 +30,7 @@ function PaymentsPageContent() {
   return (
     <Box w={"full"}>
       <Box
-        mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "8rem" : "6rem"}` }}
+        mt={{ base: "12rem", md: "6rem", lg: `${isHeightThan1200 ? "8rem" : "6rem"}` }}
         px={{ base: "1rem", md: "2rem", lg: "4rem" }}
         mb={"2rem"}
       >

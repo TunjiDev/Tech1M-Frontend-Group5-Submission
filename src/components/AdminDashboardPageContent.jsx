@@ -27,14 +27,14 @@ const data = [
 ];
 
 function AdminDashboardPageContent() {
-  const [isLowerThan400] = useMediaQuery("(max-width: 30rem)");
-  const [isHigherThan1200] = useMediaQuery("(min-height: 62.5rem)");
+  const [isWidthLowerThan400] = useMediaQuery("(max-width: 30rem)");
+  const [isHeightThan1200] = useMediaQuery("(min-height: 62.5rem)");
   const navigate = useNavigate();
 
   return (
     <Box w={"full"}>
       <Box
-        mt={{ base: "12rem", md: "6rem", lg: `${isHigherThan1200 ? "8rem" : "6rem"}` }}
+        mt={{ base: "12rem", md: "6rem", lg: `${isHeightThan1200 ? "8rem" : "6rem"}` }}
         px={{ base: ".2rem", md: "1rem", lg: "1rem" }}
         pb={"2rem"}
         w={{ base: "90%", md: "100%", lg: "100%" }}
@@ -399,7 +399,7 @@ function AdminDashboardPageContent() {
 
         <Flex direction={{ base: "column", md: "column", lg: "row" }} alignItems={"center"}>
           <Flex mt={"2rem"} flex={{ base: 1, md: 1, lg: 2 }} justifyContent={"center"}>
-            <BarChart width={isLowerThan400 ? 300 : 600} height={300} data={data}>
+            <BarChart width={isWidthLowerThan400 ? 300 : 600} height={300} data={data}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="day" />
               <YAxis />
