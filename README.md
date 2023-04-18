@@ -61,7 +61,7 @@ Logged-in users can no longer visit the login page."
 
 - ![Chakra UI](https://img.shields.io/badge/-Chakra%20UI-319795?style=flat-square&logo=chakraui&logoColor=white)
 
-  Chakra UI is a simple and modular component library for building React applications.
+  Chakra UI is a simple and modular component library for building and styling React applications.
 
 - ![React Router](https://img.shields.io/badge/-React%20Router-CA4245?style=flat-square&logo=reactrouter&logoColor=white)
 
