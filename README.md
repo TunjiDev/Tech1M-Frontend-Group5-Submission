@@ -4,13 +4,11 @@
 
 https://tech1m-juniors.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Contributors (Group Members):
 
-1. [Adetunji Igbatayo](https://github.com/TunjiDev)\
-2. [Deborah Idowu](https://github.com/idowudeborah)\
-3. [Wisdom Iwunwa](https://github.com/wisdomI)\
+1. [Adetunji Igbatayo](https://github.com/TunjiDev)
+2. [Deborah Idowu](https://github.com/idowudeborah)
+3. [Wisdom Iwunwa](https://github.com/wisdomI)
 
 ## Task Performed by each member:
 
@@ -97,6 +95,8 @@ REACT_APP_API_KEY
 Kindly add it to your project before starting the server locally.
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
