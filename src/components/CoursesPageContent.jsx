@@ -68,8 +68,8 @@ function CoursesPageContent() {
                 COURSE
               </Text>
               <Box>
-                <Image src={uparrow} />
-                <Image src={downarrow} />
+                <Image src={uparrow} alt="icon" />
+                <Image src={downarrow} alt="icon" />
               </Box>
             </Flex>
 
@@ -88,8 +88,8 @@ function CoursesPageContent() {
                 DURATION
               </Text>
               <Box>
-                <Image src={uparrow} />
-                <Image src={downarrow} />
+                <Image src={uparrow} alt="icon" />
+                <Image src={downarrow} alt="icon" />
               </Box>
             </Flex>
 
@@ -98,8 +98,8 @@ function CoursesPageContent() {
                 ALL
               </Text>
               <Box>
-                <Image src={uparrow} />
-                <Image src={downarrow} />
+                <Image src={uparrow} alt="icon" />
+                <Image src={downarrow} alt="icon" />
               </Box>
             </Flex>
           </Flex>
@@ -483,7 +483,7 @@ function CoursesPageContent() {
 
         <Flex mt={"2rem"} color={"#96C0FF"} justifyContent={"center"} alignItems={"center"}>
           <Text onClick={prevPageHandler} cursor={"pointer"}>
-            <Image src={leftarrow} />
+            <Image src={leftarrow} alt="icon" />
           </Text>
           <Text onClick={prevPageHandler} cursor={"pointer"} ml={"1rem"}>
             Prev
@@ -519,7 +519,7 @@ function CoursesPageContent() {
             Next
           </Text>
           <Text onClick={nextPageHandler} cursor={"pointer"}>
-            <Image src={rightarrow} />
+            <Image src={rightarrow} alt="icon" />
           </Text>
         </Flex>
       </Box>
