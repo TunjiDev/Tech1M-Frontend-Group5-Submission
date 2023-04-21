@@ -12,7 +12,7 @@ https://tech1m-juniors.netlify.app/
 
 ## Task Performed by each member:
 
-1. [Adetunji Igbatayo](https://github.com/TunjiDev): Sliced all screens from the Figma design, built user authentication and authorization features, such as signup, login, reset password, routes protection, and signout. Also, created reusable custom components, custom hooks, and added extra functionalities like signout and color mode. Performed unit and manual testing in all areas of the web app to ensure everything worked fine, as well as code refactoring and cleanup.
+1. [Adetunji Igbatayo](https://github.com/TunjiDev): Sliced all screens from the Figma design, built user authentication and authorization features, such as signup, login, reset password, routes protection, and signout. Also, created reusable custom components, custom hooks, and added extra functionalities like signout and color mode. Made the app mobile responsive. Performed unit and manual testing in all areas of the web app to ensure everything worked fine, as well as code refactoring and cleanup.
 2. [Deborah Idowu](https://github.com/idowudeborah): Assisted with the slicing of screens, performed SEO optimization, and increased the SEO ratings and Accessibility to a score of 92 and 93 (respectively) when analyzed with Chrome Lighthouse. Also, handled some typography aspects such as font to match the design, performed manual testing in all areas of the app to ensure everything worked as expected, and code cleanup.
 3. [Wisdom Iwunwa](https://github.com/wisdomI): Added a favicon (logo) for the web app, performed manual testing in all areas of the app to ensure everything worked as intended, and code cleanup.
 
