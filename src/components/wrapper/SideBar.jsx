@@ -17,7 +17,7 @@ function SideBar() {
   return (
     <Flex
       bg={"#E6F0FF"}
-      h={isHeightThan1200 ? "100vh" : "full"}
+      minH={"full"}
       w={"full"}
       zIndex={-1}
       pt={{ base: "12rem", md: "7rem", lg: `${isHeightThan1200 ? "10rem" : "7rem"}` }}
