@@ -25,7 +25,7 @@ function MessagesPageContent() {
   const [isHeightThan1200] = useMediaQuery("(min-height: 62.5rem)");
 
   return (
-    <Box w={"full"}>
+    <Box w={"full"} minH={"100vh"}>
       <Box mt={{ base: "12rem", md: "6rem", lg: `${isHeightThan1200 ? "8rem" : "6rem"}` }} px={"1rem"} mb={"2rem"}>
         <Flex
           bg={"#0065FF"}

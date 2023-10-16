@@ -34,7 +34,7 @@ function CoursesPageContent() {
   };
 
   return (
-    <Box w={"full"}>
+    <Box w={"full"} minH={"100vh"}>
       <Box
         mt={{ base: "12rem", md: "6rem", lg: `${isHeightThan1200 ? "8rem" : "6rem"}` }}
         px={{ base: "1rem", md: "2rem", lg: "4rem" }}
